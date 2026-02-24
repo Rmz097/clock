@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" href="./img/icon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="theme-red-date">
+    <main class="container">
+        
+        <section class="content-column left-column">
+            
+            <article class="weather-summary-box">
+                <div class="location">--</div>
+                
+                <div id="update-toast" class="update-toast">
+                    <i class="fas fa-sync-alt fa-spin"></i> Actualizando información...
+                </div>
+                
+                <div class="update-time">
+                    <span id="weather-update-time">--</span>
+                </div>
+                
+                <div class="temp-row">
+                    <div class="current-temp" id="current-temp">--°</div>
+                    <div class="weather-icon-desc">
+                        <div class="weather-icon">--</div>
+                        <div id="weather-description">Cargando...</div>
+                    </div>
+                </div>
+                
+                <div class="temp-min-max">
+                    Día <span id="temp-day">--</span> • Noche <span id="temp-night">--</span>
+                </div>
+            </article>
+
+            <a href="./detalles.html" class="widget-link">
+                <article class="weather-details-box">
+                    <div class="sensation-row">
+                        <div class="sensation-label">Detalles del clima</div>
+                        <div class="sensation-temp-value">
+                            Sensación térmica
+                            <div class="temp-value" id="sensation-temp">--°</div>
+                        </div>
+                    </div>
+
+                    <div class="sun-times-container">
+                        <div class="sun-times">
+                            <span class="sun-icon">🌄</span>
+                            <div class="sun-value">
+                                Amanecer
+                                <span id="sunrise">--</span>
+                            </div>
+                        </div>
+                        <div class="sun-times">
+                            <span class="sun-icon">🌅</span>
+                            <div class="sun-value">
+                                Atardecer
+                                <span id="sunset">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-row">
+                            <span class="detail-icon">🌡️</span>
+                            <span class="detail-label">Máx./Mín.</span>
+                            <span class="detail-value" id="max-min-detail">--°/--°</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">💧</span>
+                            <span class="detail-label">Humedad</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">💨</span>
+                            <span class="detail-label">Presión</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">🔭</span>
+                            <span class="detail-label">Visibilidad</span>
+                            <span class="detail-value" id="visibility">-- km</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">🌬️</span>
+                            <span class="detail-label">Viento</span>
+                            <span class="detail-value" id="wind-speed">-- km/h</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">☀️</span>
+                            <span class="detail-label">Índice UV</span>
+                            <span class="detail-value" id="uv-index">--</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">💦</span>
+                            <span class="detail-label">Punto de rocío</span>
+                            <span class="detail-value" id="dew-point">--%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon">🌧️</span>
+                            <span class="detail-label">Prob. de precipitación</span>
+                            <span class="detail-value" id="rain-probability">--%</span>
+                        </div>
+                        <div class="detail-row" style="display: none">
+                            <span class="detail-icon">🌕</span>
+                            <span class="detail-label">Fase lunar</span>
+                            <span class="detail-value letter-min" id="moon-phase-detail">--</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </section>
+
+        <section class="content-column right-column">
+            
+            <a href="./calendario.html" class="widget-link">
+                <article class="date-box">
+                    <div class="day-name" id="day-name">--</div>
+                    <div class="date" id="date-number">--</div>
+                    <div class="month-year" id="month-year">-- ---. ----</div>
+
+                    <div class="calendar-info">
+                        <div id="week-info">
+                            Semana <span id="week-number">--</span> • <span id="santo-day">--</span>
+                        </div>
+                        <div id="moon-phase">
+                            <span id="moon-icon"></span>
+                            <span id="moon-phase-text">--</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <article class="time-box">
+                <div id="current-time">
+                    <span id="main-time">00:00</span>
+                    <span class="separator">:</span>
+                    <span id="current-seconds">00</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <aside class="dashboard-controls">
+        <div class="control-group">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Buscar ciudad..." autocomplete="off" />
+                <div id="search-results" class="results-list"></div>
+            </div>
+            <label><i class="fas fa-city"></i> Ubicación</label>
+            <select id="city-select">
+                <option value="0">Gral. Escobedo</option>
+                <option value="1">Monterrey</option>
+                <option value="2">San Nicolás</option>
+                <option value="3">Tampico</option>
+                <option value="4">Naranjos</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label><i class="fas fa-palette"></i> Interfaz</label>
+            <select id="theme-select" onchange="changeTheme(this.value)">
+                <option value="red-date">Transparente</option>
+                <option value="dark">Oscuro</option>
+                <option value="light">Claro</option>
+                <option value="amoled-pro">Amoled</option>
+            </select>
+        </div>
+       <div class="voice-control" style="margin: 10px; display: flex; align-items: center; gap: 10px;">
+    <div class="control-group">
+    <label><i class="fas fa-volume-up"></i> Sonido</label>
+    <div class="voice-control-wrapper">
+        <label class="switch">
+            <input type="checkbox" id="voice-toggle">
+            <span class="slider"></span>
+        </label>
+        <span class="control-label-text">Anunciar hora</span>
+    </div>
+</div>
+</div>
+    </label>
+</div>
+
+        <button id="fullscreen-button" onclick="toggleFullscreen()" class="btn-fullscreen">
+            <i class="fas fa-expand"></i>Pantalla Completa
+        </button>
+    </aside>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/wakeup.js"></script>
+</body>
+</html>

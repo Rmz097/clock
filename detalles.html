@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronóstico Extendido | Dashboard Clima</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/style.css"> 
+    
+    <style>
+        /* OPTIMIZACIONES DE UI PARA DETALLES */
+        body {
+            overflow-y: overlay; /* Scroll estético */
+            padding: 30px 5%;
+            min-height: 100vh;
+        }
+
+        .details-container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Header con Glassmorphism */
+        .header-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .btn-back {
+            background: var(--box-background);
+            color: var(--text-color-primary);
+            padding: 12px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-back:hover {
+            transform: translateX(-5px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Grid de Pronóstico Semanal */
+        .weekly-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .forecast-day-item {
+            background: var(--box-background);
+            backdrop-filter: blur(15px);
+            padding: 25px 15px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .forecast-day-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--red-highlight);
+        }
+
+        .day-label {
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: var(--text-color-secondary);
+        }
+
+        .day-icon {
+            font-size: 3rem;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .day-temps .max {
+            font-size: 1.8rem;
+            font-weight: 900;
+            display: block;
+            color: var(--text-color-primary);
+        }
+
+        .day-temps .min {
+            font-size: 1.1rem;
+            color: var(--text-color-secondary);
+        }
+
+        .day-rain {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #4da3ff; /* Azul para lluvia */
+            font-weight: 700;
+        }
+
+        /* Estados de Carga (Skeleton) */
+        .skeleton {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Media Queries para Tablets y Móviles */
+        @media (max-width: 768px) {
+            .header-details { flex-direction: column; gap: 20px; text-align: center; }
+            .location-info { text-align: center !important; }
+            .weekly-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+        }
+    </style>
+</head>
+
+<body class="theme-red-date">
+    <div class="details-container">
+        
+        <header class="header-details">
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> VOLVER
+            </a>
+            <div class="location-info" style="text-align: right;">
+                <h1 class="location" id="location-name">---</h1>
+                <p id="weather-update-time" class="update-time">Sincronizando...</p>
+            </div>
+        </header>
+
+        <section class="weather-details-box">
+            <div class="sensation-row">
+                <span class="sensation-label">RESUMEN DEL DÍA</span>
+                <div class="sensation-temp-value">
+                    <span id="weather-description">Cargando datos...</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-row">
+                    
+                    <span class="detail-label">🌬️ Viento</span>
+                    <span id="wind-speed" class="detail-value">-- km/h</span>
+                </div>
+                <div class="detail-row">
+                    
+                    <span class="detail-label">💧 Humedad</span>
+                    <span id="humidity" class="detail-value">--%</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">☀️ Índice UV</span>
+                    <span id="uv-index" class="detail-value">--</span>
+                </div>
+                <div class="detail-row"> 
+                    <span class="detail-label">🔭 Visibilidad</span>
+                    <span id="visibility" class="detail-value">-- km</span>
+                </div>
+            </div>
+        </section>
+
+        <h2 style="color: var(--text-color-primary); font-weight: 900; margin-top: 10px;">PRONÓSTICO EXTENDIDO</h2>
+        
+        <div id="weekly-forecast-container" class="weekly-grid">
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+            <div class="forecast-day-item skeleton" style="height: 250px;"></div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Sincronización del Tema desde LocalStorage
+            const savedTheme = localStorage.getItem("userTheme") || "red-date";
+            document.body.className = `theme-${savedTheme}`;
+
+            // Disparar la carga de datos (debe estar definida en script.js)
+            if (typeof getWeatherData === 'function') {
+                getWeatherData(); 
+            }
+        });
+    </script>
+</body>
+</html>
