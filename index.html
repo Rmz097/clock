@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,31 +15,45 @@
 
 <body class="theme-red-date">
     <main class="container">
-        
+
         <section class="content-column left-column">
-            
+
             <article class="weather-summary-box">
-                <div class="location">--</div>
-                
+                <div class="location" id="location-name">--</div>
+
                 <div id="update-toast" class="update-toast">
                     <i class="fas fa-sync-alt fa-spin"></i> Actualizando información...
                 </div>
-                
+
                 <div class="update-time">
                     <span id="weather-update-time">--</span>
                 </div>
-                
-                <div class="temp-row">
-                    <div class="current-temp" id="current-temp">--°</div>
-                    <div class="weather-icon-desc">
-                        <div class="weather-icon">--</div>
-                        <div id="weather-description">Cargando...</div>
-                    </div>
-                </div>
-                
-                <div class="temp-min-max">
-                    Día <span id="temp-day">--</span> • Noche <span id="temp-night">--</span>
-                </div>
+
+                <div class="weather-flex-container">
+    
+    <div class="weather-main-info">
+        <div class="temp-row">
+            <div class="current-temp" id="current-temp">--°</div>
+            <div class="weather-icon-desc">
+                <div class="weather-icon">--</div>
+                <div id="weather-description">Cargando...</div>
+            </div>
+        </div>
+        <div class="temp-min-max">
+            Día <span id="temp-day">--</span> • Noche <span id="temp-night">--</span>
+        </div>
+    </div>
+
+<div class="aqi-container">
+    <div class="aqi-header">
+        <i id="aqi-icon-dynamic" class="fas fa-wind aqi-icon"></i>
+        <span class="aqi-label">CALIDAD DEL AIRE</span>
+    </div>
+    <div class="aqi-value" id="aqi-status">--</div>
+    <div class="aqi-desc" id="aqi-advice">Cargando...</div>
+</div>
+    
+</div>
             </article>
 
             <a href="./detalles.html" class="widget-link">
@@ -120,7 +135,7 @@
         </section>
 
         <section class="content-column right-column">
-            
+
             <a href="./calendario.html" class="widget-link">
                 <article class="date-box">
                     <div class="day-name" id="day-name">--</div>
@@ -174,20 +189,20 @@
                 <option value="amoled-pro">Amoled</option>
             </select>
         </div>
-       <div class="voice-control" style="margin: 10px; display: flex; align-items: center; gap: 10px;">
-    <div class="control-group">
-    <label><i class="fas fa-volume-up"></i> Sonido</label>
-    <div class="voice-control-wrapper">
-        <label class="switch">
-            <input type="checkbox" id="voice-toggle">
-            <span class="slider"></span>
+        <div class="voice-control" style="margin: 10px; display: flex; align-items: center; gap: 10px;">
+            <div class="control-group">
+                <label><i class="fas fa-volume-up"></i> Sonido</label>
+                <div class="voice-control-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" id="voice-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="control-label-text">Anunciar hora</span>
+                </div>
+            </div>
+        </div>
         </label>
-        <span class="control-label-text">Anunciar hora</span>
-    </div>
-</div>
-</div>
-    </label>
-</div>
+        </div>
 
         <button id="fullscreen-button" onclick="toggleFullscreen()" class="btn-fullscreen">
             <i class="fas fa-expand"></i>Pantalla Completa
@@ -197,4 +212,5 @@
     <script src="./js/script.js"></script>
     <script src="./js/wakeup.js"></script>
 </body>
+
 </html>

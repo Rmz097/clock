@@ -227,6 +227,125 @@ a { text-decoration: none; color: inherit; }
 .letter-min{ font-size: 0.6rem; }
 
 /* ====================================== */
+/* 6. Calidad del Aire (Ajustado)         */
+/* ====================================== */
+
+/* Contenedor principal: Centrado vertical y alineación proporcional */
+.weather-flex-container {
+    display: flex;
+    align-items: center;      /* Centrado vertical real entre Clima y AQI */
+    justify-content: flex-start; 
+    gap: 50px;                /* Espacio proporcional para moverlo a la derecha */
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Bloque del Clima: Evita que colapse */
+.weather-main-info {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Bloque AQI: Centrado vertical y herencia de temas */
+.aqi-container {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: flex-start;  
+    border-left: 2px solid rgba(255, 255, 255, 0.15); /* Línea adaptativa */
+    padding-left: 30px;       /* Desplazamiento visual a la derecha */
+    height: 100px;            /* Altura para match con el bloque de temperatura */
+}
+
+/* Encabezado con Icono */
+.aqi-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.aqi-icon {
+    font-size: 0.9rem;
+    color: var(--red-highlight); /* Sigue el color de destaque de tus temas */
+    opacity: 0.9;
+}
+
+.aqi-label {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-color-secondary);
+}
+
+/* Valor Numérico Principal */
+
+.aqi-value {
+    font-size: 2.8rem; /* Tamaño grande para "Buena" */
+    font-weight: 900;
+    line-height: 1;
+    margin: 5px 0;
+    letter-spacing: -1px; /* Look más moderno */
+    color: var(--text-color-primary);
+}
+/* Descripción (Buena, Mala, etc.) */
+.aqi-desc {
+    font-size: 0.85rem; /* Texto de salud más pequeño y discreto */
+    font-weight: 700;
+    margin-top: 2px;
+    opacity: 0.9;
+    color: var(--text-color-secondary);
+    overflow-wrap: break-word;
+    
+}
+
+/* Ajustes para Temas AMOLED (Mejora de contraste) */
+.theme-amoled .aqi-container,
+.theme-amoled-pro .aqi-container {
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-amoled-pro .aqi-value {
+    color: #afafaf; /* Match con el gris pro de tu tema */
+}
+
+@media (max-width: 600px) {
+    /* Permitimos que los elementos se apilen uno debajo de otro */
+    .weather-flex-container {
+        flex-direction: column; 
+        align-items: flex-start; /* Alineado a la izquierda como el resto */
+        gap: 20px; /* Reducimos el espacio entre bloques */
+        margin-top: 15px;
+    }
+
+    /* Quitamos la línea vertical y el padding lateral en móviles */
+    .aqi-container {
+        border-left: none; /* Quitamos la línea para que no se vea rara */
+        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Opcional: una línea horizontal sutil */
+        padding-left: 0; 
+        padding-top: 15px;
+        height: auto; /* Que crezca según el contenido */
+        width: 100%; /* Que ocupe todo el ancho disponible */
+    }
+
+    /* Ajustamos el tamaño de la letra para que no sea gigante en el cel */
+    .aqi-value {
+        font-size: 2.2rem; 
+        margin: 2px 0;
+    }
+
+    .aqi-desc {
+        font-size: 0.9rem;
+        max-width: 100%; /* Para que el texto de salud no se corte */
+    }
+}
+
+/* ====================================== */
 /* 6. Controles                           */
 /* ====================================== */
 
