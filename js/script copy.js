@@ -7,18 +7,18 @@
 // 1. CONFIGURACIÓN Y SANTORAL
 // ======================================
 const Santoral = {
-    1: { 1: "Santa María Madre de Dios", 2: "San Basilio Magno y San Gregorio Nacianceno", 3: "Santo Tomás de Aquino", 4: "Santa Ángela de Foligno", 5: "San Juan Nepomuceno Neumann", 6: "Epifanía del Señor (Reyes Magos)", 7: "San Raimundo de Peñafort", 8: "San Severino", 9: "San Eulogio de Córdoba", 10: "San Gregorio X, Papa", 11: "San Teodosio Cenobiarca", 12: "San Benito Biscop", 13: "San Hilario de Poitiers", 14: "San Félix de Nola", 15: "San Pablo Eremita", 16: "San Marcelo I", 17: "San Antonio Abad", 18: "Santa Prisca", 19: "San Mario y Santa Marta", 20: "San Fabián, Papa y San Sebastián", 21: "Santa Inés de Roma", 22: "San Vicente de Zaragoza", 23: "San Ildefonso de Toledo", 24: "San Francisco de Sales", 25: "Conversión de San Pablo", 26: "San Timoteo y San Tito", 27: "Santa Ángela de Mérici", 28: "Santo Tomás de Aquino", 29: "San Francisco de Sales", 30: "Santa Martina", 31: "San Juan Bosco" },
-    2: { 1: "Santa Brígida de Kildare", 2: "Presentación del Señor (Candelaria)", 3: "San Blas de Sebaste", 4: "San Gilberto de Sempringham", 5: "Santa Águeda de Catania", 6: "San Pablo Miki y compañeros", 7: "San Ricardo, Rey", 8: "San Jerónimo Emiliani", 9: "Santa Apolonia", 10: "Santa Escolástica", 11: "Nuestra Señora de Lourdes", 12: "Santa Eulalia de Barcelona", 13: "San Benigno de Todi", 14: "San Cirilo y San Metodio", 15: "San Claudio de la Colombière", 16: "Santa Juliana de Florencia", 17: "Los Siete Fundadores de la Orden de los Servitas", 18: "San Simeón", 19: "San Conrado de Piacenza", 20: "San Eleuterio", 21: "San Pedro Damián", 22: "Cátedra de San Pedro", 23: "San Policarpo de Esmirna", 24: "San Sergio y San Baco", 25: "Santa Walburga", 26: "San Néstor", 27: "San Gabriel de Nuestra Señora de los Dolores", 28: "San Román Abad", 29: "San Osvaldo de Worcester" },
-    3: { 1: "San Albino de Angers", 2: "Santa Inés de Bohemia", 3: "Santa Catalina Drexel", 4: "San Casimiro de Polonia", 5: "San Juan José de la Cruz", 6: "Santa Rosa de Viterbo", 7: "Santas Perpetua y Felicidad", 8: "San Juan de Dios", 9: "Santa Francisca Romana", 10: "San Cayo y San Alejandro", 11: "Santa Sofronia", 12: "San Maximiliano", 13: "Santa Eufrasia de Constantinopla", 14: "Santa Matilde", 15: "San Longino", 16: "Santa Heriberto de Colonia", 17: "San Patricio de Irlanda", 18: "San Cirilo de Jerusalén", 19: "San José, Esposo de la Virgen María", 20: "San Martín de Braga", 21: "San Nicolás de Flüe", 22: "Santa Lea de Roma", 23: "San Toribio de Mogrovejo", 24: "Santa Catalina de Suecia", 25: "Anunciación del Señor", 26: "San Manuel de Creta", 27: "San Ruperto de Salzburgo", 28: "San Sixto III", 29: "San Jonás", 30: "San Juan Clímaco", 31: "Santa Balbina" },
-    4: { 1: "San Hugo de Grenoble", 2: "San Francisco de Paula", 3: "San Sixto I", 4: "San Isidoro de Sevilla", 5: "San Vicente Ferrer", 6: "San Pedro de Verona", 7: "San Juan Bautista de La Salle", 8: "Santa Julia Billiart", 9: "Santa María de Cleofás", 10: "San Miguel de los Santos", 11: "San Estanislao de Cracovia", 12: "San Julio I", 13: "San Martín I, Papa", 14: "San Telmo", 15: "Santa Anastasia", 16: "Santa Bernadette Soubirous", 17: "Santa Kateri Tekakwitha", 18: "San Perfecto de Córdoba", 19: "San Abraham", 20: "San Teotimo", 21: "San Anselmo de Canterbury", 22: "San Cayo y San Sotero", 23: "San Jorge, Mártir", 24: "San Fidel de Sigmaringa", 25: "San Marcos Evangelista", 26: "Nuestra Señora del Buen Consejo", 27: "Santa Zita de Lucca", 28: "San Luis María Grignion de Montfort", 29: "Santa Catalina de Siena", 30: "San Pío V, Papa" },
-    5: { 1: "San José Obrero", 2: "San Atanasio", 3: "San Felipe y Santiago el Menor", 4: "San Florián", 5: "San Hilarión de Gaza", 6: "San Juan ante Portam Latinam", 7: "San Juan de Beverley", 8: "Nuestra Señora de Luján", 9: "San Pacomio", 10: "San Juan de Ávila", 11: "San Mamerto de Vienne", 12: "San Nereo y San Aquiles", 13: "Nuestra Señora de Fátima", 14: "San Matías Apóstol", 15: "San Isidro Labrador", 16: "San Ubaldo", 17: "San Pascual Bailón", 18: "San Juan I, Papa", 19: "San Crispín de Viterbo", 20: "San Bernardino de Siena", 21: "San Cristóbal Magallanes y compañeros mártires", 22: "Santa Rita de Casia", 23: "San Desiderio de Langres", 24: "María Auxiliadora", 25: "San Beda el Venerable", 26: "San Felipe Neri", 27: "San Agustín de Canterbury", 28: "San Germán de París", 29: "San Maximino de Tréveris", 30: "Santa Juana de Arco", 31: "Visitación de la Virgen María" },
-    6: { 1: "San Justino, Mártir", 2: "San Marcelino y San Pedro", 3: "San Carlos Lwanga y compañeros mártires", 4: "San Francisco Caracciolo", 5: "San Bonifacio", 6: "San Norberto", 7: "San Roberto de Newminster", 8: "San Maximino de Aix", 9: "San Efrén de Siria", 10: "San Landerico de París", 11: "San Bernabé Apóstol", 12: "San Juan de Sahagún", 13: "San Antonio de Padua", 14: "San Eliseo", 15: "Santa Germana Cousin", 16: "Santa Lutgarda", 17: "San Alberto Chmielowski", 18: "San Gregorio Barbarigo", 19: "San Romualdo", 20: "San Silvano", 21: "San Luis Gonzaga", 22: "San Juan Fisher y Santo Tomás Moro", 23: "Santa Etheldreda", 24: "Natividad de San Juan Bautista", 25: "Santa Soledad", 26: "San Josemaría Escrivá de Balaguer", 27: "San Cirilo de Alejandría", 28: "San Ireneo de Lyon", 29: "San Pedro y San Pablo, Apóstoles", 30: "Los Primeros Mártires de la Iglesia de Roma" },
-    7: { 1: "San Aarón", 2: "San Bernardino Realino", 3: "Santo Tomás Apóstol", 4: "Santa Isabel de Portugal", 5: "San Antonio María Zaccaría", 6: "Santa María Goretti", 7: "San Fermín de Amiens", 8: "San Eugenio III, Papa", 9: "Santa Verónica Giuliani", 10: "Santa Felicidad", 11: "San Benito de Nursia", 12: "San Juan Gualberto", 13: "San Enrique II", 14: "San Camilo de Lelis", 15: "San Buenaventura", 16: "Nuestra Señora del Carmen", 17: "Santa Marcelina", 18: "San Camilo de Lelis", 19: "San Vicente de Paúl", 20: "San Apolinar de Rávena", 21: "San Lorenzo de Brindis", 22: "Santa María Magdalena", 23: "Santa Brígida de Suecia", 24: "San Charbel Makhlouf", 25: "Santiago Apóstol", 26: "San Joaquín y Santa Ana", 27: "San Pantaleón", 28: "San Víctor I, Papa", 29: "Santa Marta, Santa María y San Lázaro", 30: "San Pedro Crisólogo", 31: "San Ignacio de Loyola" },
-    8: { 1: "San Alfonso María de Ligorio", 2: "San Eusebio de Vercelli", 3: "Santa Lidia", 4: "San Juan María Vianney (Cura de Ars)", 5: "Dedicación de Santa María la Mayor", 6: "Transfiguración del Señor", 7: "San Sixto II, Papa y compañeros mártires", 8: "Santo Domingo de Guzmán", 9: "Santa Teresa Benedicta de la Cruz (Edith Stein)", 10: "San Lorenzo, Mártir", 11: "Santa Clara de Asís", 12: "Santa Juana de Chantal", 13: "San Ponciano y San Hipólito", 14: "San Maximiliano María Kolbe", 15: "Asunción de la Virgen María", 16: "San Esteban de Hungría", 17: "San Jacinto de Polonia", 18: "Santa Elena", 19: "San Juan Eudes", 20: "San Bernardo de Claraval", 21: "San Pío X, Papa", 22: "Santa María Reina", 23: "Santa Rosa de Lima", 24: "San Bartolomé Apóstol", 25: "San Luis IX de Francia", 26: "San Ceferino, Papa", 27: "Santa Mónica", 28: "San Agustín de Hipona", 29: "Martirio de San Juan Bautista", 30: "San Felix", 31: "San Ramón Nonato" },
-    9: { 1: "San Josué", 2: "Santa Rachel", 3: "San Gregorio Magno", 4: "Santa Rosa de Viterbo", 5: "Santa Teresa de Calcuta", 6: "San Zacarías", 7: "San Clodoaldo", 8: "Natividad de la Virgen María", 9: "San Pedro Claver", 10: "San Nicolás de Tolentino", 11: "San Proto y San Jacinto", 12: "Dulce Nombre de María", 13: "San Juan Crisóstomo", 14: "Exaltación de la Santa Cruz", 15: "Nuestra Señora de los Dolores", 16: "San Cornelio y San Cipriano", 17: "San Roberto Belarmino", 18: "San Ricardo de Wessex", 19: "San Jenaro", 20: "San Andrés Kim Taegon y compañeros mártires", 21: "San Mateo Apóstol y Evangelista", 22: "San Mauricio", 23: "San Pío de Pietrelcina (Padre Pío)", 24: "Nuestra Señora de la Merced", 25: "San Cleofás", 26: "San Cosme y San Damián", 27: "San Vicente de Paúl", 28: "San Wenceslao", 29: "San Miguel, San Gabriel y San Rafael, Arcángeles", 30: "San Jerónimo" },
-    10: { 1: "Santa Teresita del Niño Jesús", 2: "Santos Ángeles Custodios", 3: "San Francisco de Borja", 4: "San Francisco de Asís", 5: "Santa Faustina Kowalska", 6: "San Bruno de Colonia", 7: "Nuestra Señora del Rosario", 8: "Santa Pelagia", 9: "San Dionisio y compañeros mártires", 10: "San Francisco de Paula", 11: "San Juan XXIII, Papa", 12: "Nuestra Señora del Pilar (Día de la Hispanidad)", 13: "San Eduardo el Confesor", 14: "San Calixto I, Papa", 15: "Santa Teresa de Jesús (de Ávila)", 16: "Santa Eduviges", 17: "San Ignacio de Antioquía", 18: "San Lucas Evangelista", 19: "San Pablo de la Cruz", 20: "San Artemio", 21: "Santa Úrsula y compañeras", 22: "San Juan Pablo II, Papa", 23: "San Juan de Capistrano", 24: "San Antonio María Claret", 25: "San Crisanto y Santa Daría", 26: "San Rogaciano y San Felicísimo", 27: "San Frumentio", 28: "San Simón y San Judas, Apóstoles", 29: "San Narciso de Jerusalén", 30: "San Marcelo de Tánger", 31: "San Quintín" },
-    11: { 1: "Todos los Santos", 2: "Conmemoración de los Fieles Difuntos", 3: "San Martín de Porres", 4: "San Carlos Borromeo", 5: "Santa Isabel, madre de San Juan Bautista", 6: "San Leonardo de Noblac", 7: "San Ernesto", 8: "Beato Juan Duns Scoto", 9: "Dedicación de la Basílica de Letrán", 10: "San León Magno", 11: "San Martín de Tours", 12: "San Josafat", 13: "San Diego de Alcalá", 14: "San Nicolás Tavélic", 15: "San Alberto Magno", 16: "Santa Margarita de Escocia", 17: "Santa Isabel de Hungría", 18: "Dedicación de San Pedro y San Pablo", 19: "Santa Matilde de Hackeborn", 20: "San Félix de Valois", 21: "Presentación de la Virgen María", 22: "Santa Cecilia", 23: "San Clemente I", 24: "San Andrés Dung Lac y compañeros mártires", 25: "Santa Catalina de Alejandría", 26: "San Silvestre Gozzolini", 27: "Nuestra Señora de la Medalla Milagrosa", 28: "Santa Catalina Labouré", 29: "San Saturnino", 30: "San Andrés Apóstol" },
-    12: { 1: "San Eloy", 2: "Santa Bibiana / San Ponciano", 3: "San Francisco Javier", 4: "Santa Bárbara / San Juan Damasceno", 5: "San Sabás", 6: "San Nicolás de Bari", 7: "San Ambrosio de Milán", 8: "Inmaculada Concepción", 9: "San Juan Diego Cuauhtlatoatzin", 10: "Nuestra Señora de Loreto", 11: "San Dámaso I", 12: "Nuestra Señora de Guadalupe", 13: "Santa Lucía", 14: "San Juan de la Cruz", 15: "Santa Cristina", 16: "Santa Adelaida", 17: "San Lázaro", 18: "Nuestra Señora de la Esperanza", 19: "San Urbano V", 20: "Santo Domingo de Silos", 21: "San Pedro Canisio", 22: "Santa Francisca Javier Cabrini", 23: "San Antonio de Santa Ana Galvao", 24: "Nochebuena", 25: "Natividad del Señor (Navidad)", 26: "San Esteban Protomártir", 27: "San Juan Apóstol y Evangelista", 28: "Santos Inocentes", 29: "Santo Tomás Becket", 30: "Santa Judit / San Sabino", 31: "San Silvestre I" },
+    1: { 1: "Santa María Madre de Dios", 2: "San Basilio Magno y San Gregorio Nacianceno", 3: "Santo Tomás de Aquino", 4: "Santa Ángela de Foligno", 5: "San Juan Nepomuceno Neumann", 6: "Epifanía del Señor (Reyes Magos)", 7: "San Raimundo de Peñafort", 8: "San Severino", 9: "San Eulogio de Córdoba", 10: "San Gregorio X, Papa", 11: "San Teodosio Cenobiarca", 12: "San Benito Biscop", 13: "San Hilario de Poitiers", 14: "San Félix de Nola", 15: "San Pablo Eremita", 16: "San Marcelo I", 0: "San Antonio Abad", 18: "Santa Prisca", 19: "San Mario y Santa Marta", 20: "San Fabián, Papa y San Sebastián", 21: "Santa Inés de Roma", 22: "San Vicente de Zaragoza", 23: "San Ildefonso de Toledo", 24: "San Francisco de Sales", 25: "Conversión de San Pablo", 26: "San Timoteo y San Tito", 27: "Santa Ángela de Mérici", 28: "Santo Tomás de Aquino", 29: "San Francisco de Sales", 30: "Santa Martina", 31: "San Juan Bosco" },
+    2: { 1: "Santa Brígida de Kildare", 2: "Presentación del Señor (Candelaria)", 3: "San Blas de Sebaste", 4: "San Gilberto de Sempringham", 5: "Santa Águeda de Catania", 6: "San Pablo Miki y compañeros", 7: "San Ricardo, Rey", 8: "San Jerónimo Emiliani", 9: "Santa Apolonia", 10: "Santa Escolástica", 11: "Nuestra Señora de Lourdes", 12: "Santa Eulalia de Barcelona", 13: "San Benigno de Todi", 14: "San Cirilo y San Metodio", 15: "San Claudio de la Colombière", 16: "Santa Juliana de Florencia", 0: "Los Siete Fundadores de la Orden de los Servitas", 18: "San Simeón", 19: "San Conrado de Piacenza", 20: "San Eleuterio", 21: "San Pedro Damián", 22: "Cátedra de San Pedro", 23: "San Policarpo de Esmirna", 24: "San Sergio y San Baco", 25: "Santa Walburga", 26: "San Néstor", 27: "San Gabriel de Nuestra Señora de los Dolores", 28: "San Román Abad", 29: "San Osvaldo de Worcester" },
+    3: { 1: "San Albino de Angers", 2: "Santa Inés de Bohemia", 3: "Santa Catalina Drexel", 4: "San Casimiro de Polonia", 5: "San Juan José de la Cruz", 6: "Santa Rosa de Viterbo", 7: "Santas Perpetua y Felicidad", 8: "San Juan de Dios", 9: "Santa Francisca Romana", 10: "San Cayo y San Alejandro", 11: "Santa Sofronia", 12: "San Maximiliano", 13: "Santa Eufrasia de Constantinopla", 14: "Santa Matilde", 15: "San Longino", 16: "Santa Heriberto de Colonia", 0: "San Patricio de Irlanda", 18: "San Cirilo de Jerusalén", 19: "San José, Esposo de la Virgen María", 20: "San Martín de Braga", 21: "San Nicolás de Flüe", 22: "Santa Lea de Roma", 23: "San Toribio de Mogrovejo", 24: "Santa Catalina de Suecia", 25: "Anunciación del Señor", 26: "San Manuel de Creta", 27: "San Ruperto de Salzburgo", 28: "San Sixto III", 29: "San Jonás", 30: "San Juan Clímaco", 31: "Santa Balbina" },
+    4: { 1: "San Hugo de Grenoble", 2: "San Francisco de Paula", 3: "San Sixto I", 4: "San Isidoro de Sevilla", 5: "San Vicente Ferrer", 6: "San Pedro de Verona", 7: "San Juan Bautista de La Salle", 8: "Santa Julia Billiart", 9: "Santa María de Cleofás", 10: "San Miguel de los Santos", 11: "San Estanislao de Cracovia", 12: "San Julio I", 13: "San Martín I, Papa", 14: "San Telmo", 15: "Santa Anastasia", 16: "Santa Bernadette Soubirous", 0: "Santa Kateri Tekakwitha", 18: "San Perfecto de Córdoba", 19: "San Abraham", 20: "San Teotimo", 21: "San Anselmo de Canterbury", 22: "San Cayo y San Sotero", 23: "San Jorge, Mártir", 24: "San Fidel de Sigmaringa", 25: "San Marcos Evangelista", 26: "Nuestra Señora del Buen Consejo", 27: "Santa Zita de Lucca", 28: "San Luis María Grignion de Montfort", 29: "Santa Catalina de Siena", 30: "San Pío V, Papa" },
+    5: { 1: "San José Obrero", 2: "San Atanasio", 3: "San Felipe y Santiago el Menor", 4: "San Florián", 5: "San Hilarión de Gaza", 6: "San Juan ante Portam Latinam", 7: "San Juan de Beverley", 8: "Nuestra Señora de Luján", 9: "San Pacomio", 10: "San Juan de Ávila", 11: "San Mamerto de Vienne", 12: "San Nereo y San Aquiles", 13: "Nuestra Señora de Fátima", 14: "San Matías Apóstol", 15: "San Isidro Labrador", 16: "San Ubaldo", 0: "San Pascual Bailón", 18: "San Juan I, Papa", 19: "San Crispín de Viterbo", 20: "San Bernardino de Siena", 21: "San Cristóbal Magallanes y compañeros mártires", 22: "Santa Rita de Casia", 23: "San Desiderio de Langres", 24: "María Auxiliadora", 25: "San Beda el Venerable", 26: "San Felipe Neri", 27: "San Agustín de Canterbury", 28: "San Germán de París", 29: "San Maximino de Tréveris", 30: "Santa Juana de Arco", 31: "Visitación de la Virgen María" },
+    6: { 1: "San Justino, Mártir", 2: "San Marcelino y San Pedro", 3: "San Carlos Lwanga y compañeros mártires", 4: "San Francisco Caracciolo", 5: "San Bonifacio", 6: "San Norberto", 7: "San Roberto de Newminster", 8: "San Maximino de Aix", 9: "San Efrén de Siria", 10: "San Landerico de París", 11: "San Bernabé Apóstol", 12: "San Juan de Sahagún", 13: "San Antonio de Padua", 14: "San Eliseo", 15: "Santa Germana Cousin", 16: "Santa Lutgarda", 0: "San Alberto Chmielowski", 18: "San Gregorio Barbarigo", 19: "San Romualdo", 20: "San Silvano", 21: "San Luis Gonzaga", 22: "San Juan Fisher y Santo Tomás Moro", 23: "Santa Etheldreda", 24: "Natividad de San Juan Bautista", 25: "Santa Soledad", 26: "San Josemaría Escrivá de Balaguer", 27: "San Cirilo de Alejandría", 28: "San Ireneo de Lyon", 29: "San Pedro y San Pablo, Apóstoles", 30: "Los Primeros Mártires de la Iglesia de Roma" },
+    7: { 1: "San Aarón", 2: "San Bernardino Realino", 3: "Santo Tomás Apóstol", 4: "Santa Isabel de Portugal", 5: "San Antonio María Zaccaría", 6: "Santa María Goretti", 7: "San Fermín de Amiens", 8: "San Eugenio III, Papa", 9: "Santa Verónica Giuliani", 10: "Santa Felicidad", 11: "San Benito de Nursia", 12: "San Juan Gualberto", 13: "San Enrique II", 14: "San Camilo de Lelis", 15: "San Buenaventura", 16: "Nuestra Señora del Carmen", 0: "Santa Marcelina", 18: "San Camilo de Lelis", 19: "San Vicente de Paúl", 20: "San Apolinar de Rávena", 21: "San Lorenzo de Brindis", 22: "Santa María Magdalena", 23: "Santa Brígida de Suecia", 24: "San Charbel Makhlouf", 25: "Santiago Apóstol", 26: "San Joaquín y Santa Ana", 27: "San Pantaleón", 28: "San Víctor I, Papa", 29: "Santa Marta, Santa María y San Lázaro", 30: "San Pedro Crisólogo", 31: "San Ignacio de Loyola" },
+    8: { 1: "San Alfonso María de Ligorio", 2: "San Eusebio de Vercelli", 3: "Santa Lidia", 4: "San Juan María Vianney (Cura de Ars)", 5: "Dedicación de Santa María la Mayor", 6: "Transfiguración del Señor", 7: "San Sixto II, Papa y compañeros mártires", 8: "Santo Domingo de Guzmán", 9: "Santa Teresa Benedicta de la Cruz (Edith Stein)", 10: "San Lorenzo, Mártir", 11: "Santa Clara de Asís", 12: "Santa Juana de Chantal", 13: "San Ponciano y San Hipólito", 14: "San Maximiliano María Kolbe", 15: "Asunción de la Virgen María", 16: "San Esteban de Hungría", 0: "San Jacinto de Polonia", 18: "Santa Elena", 19: "San Juan Eudes", 20: "San Bernardo de Claraval", 21: "San Pío X, Papa", 22: "Santa María Reina", 23: "Santa Rosa de Lima", 24: "San Bartolomé Apóstol", 25: "San Luis IX de Francia", 26: "San Ceferino, Papa", 27: "Santa Mónica", 28: "San Agustín de Hipona", 29: "Martirio de San Juan Bautista", 30: "San Felix", 31: "San Ramón Nonato" },
+    9: { 1: "San Josué", 2: "Santa Rachel", 3: "San Gregorio Magno", 4: "Santa Rosa de Viterbo", 5: "Santa Teresa de Calcuta", 6: "San Zacarías", 7: "San Clodoaldo", 8: "Natividad de la Virgen María", 9: "San Pedro Claver", 10: "San Nicolás de Tolentino", 11: "San Proto y San Jacinto", 12: "Dulce Nombre de María", 13: "San Juan Crisóstomo", 14: "Exaltación de la Santa Cruz", 15: "Nuestra Señora de los Dolores", 16: "San Cornelio y San Cipriano", 0: "San Roberto Belarmino", 18: "San Ricardo de Wessex", 19: "San Jenaro", 20: "San Andrés Kim Taegon y compañeros mártires", 21: "San Mateo Apóstol y Evangelista", 22: "San Mauricio", 23: "San Pío de Pietrelcina (Padre Pío)", 24: "Nuestra Señora de la Merced", 25: "San Cleofás", 26: "San Cosme y San Damián", 27: "San Vicente de Paúl", 28: "San Wenceslao", 29: "San Miguel, San Gabriel y San Rafael, Arcángeles", 30: "San Jerónimo" },
+    10: { 1: "Santa Teresita del Niño Jesús", 2: "Santos Ángeles Custodios", 3: "San Francisco de Borja", 4: "San Francisco de Asís", 5: "Santa Faustina Kowalska", 6: "San Bruno de Colonia", 7: "Nuestra Señora del Rosario", 8: "Santa Pelagia", 9: "San Dionisio y compañeros mártires", 10: "San Francisco de Paula", 11: "San Juan XXIII, Papa", 12: "Nuestra Señora del Pilar (Día de la Hispanidad)", 13: "San Eduardo el Confesor", 14: "San Calixto I, Papa", 15: "Santa Teresa de Jesús (de Ávila)", 16: "Santa Eduviges", 0: "San Ignacio de Antioquía", 18: "San Lucas Evangelista", 19: "San Pablo de la Cruz", 20: "San Artemio", 21: "Santa Úrsula y compañeras", 22: "San Juan Pablo II, Papa", 23: "San Juan de Capistrano", 24: "San Antonio María Claret", 25: "San Crisanto y Santa Daría", 26: "San Rogaciano y San Felicísimo", 27: "San Frumentio", 28: "San Simón y San Judas, Apóstoles", 29: "San Narciso de Jerusalén", 30: "San Marcelo de Tánger", 31: "San Quintín" },
+    11: { 1: "Todos los Santos", 2: "Conmemoración de los Fieles Difuntos", 3: "San Martín de Porres", 4: "San Carlos Borromeo", 5: "Santa Isabel, madre de San Juan Bautista", 6: "San Leonardo de Noblac", 7: "San Ernesto", 8: "Beato Juan Duns Scoto", 9: "Dedicación de la Basílica de Letrán", 10: "San León Magno", 11: "San Martín de Tours", 12: "San Josafat", 13: "San Diego de Alcalá", 14: "San Nicolás Tavélic", 15: "San Alberto Magno", 16: "Santa Margarita de Escocia", 0: "Santa Isabel de Hungría", 18: "Dedicación de San Pedro y San Pablo", 19: "Santa Matilde de Hackeborn", 20: "San Félix de Valois", 21: "Presentación de la Virgen María", 22: "Santa Cecilia", 23: "San Clemente I", 24: "San Andrés Dung Lac y compañeros mártires", 25: "Santa Catalina de Alejandría", 26: "San Silvestre Gozzolini", 27: "Nuestra Señora de la Medalla Milagrosa", 28: "Santa Catalina Labouré", 29: "San Saturnino", 30: "San Andrés Apóstol" },
+    12: { 1: "San Eloy", 2: "Santa Bibiana / San Ponciano", 3: "San Francisco Javier", 4: "Santa Bárbara / San Juan Damasceno", 5: "San Sabás", 6: "San Nicolás de Bari", 7: "San Ambrosio de Milán", 8: "Inmaculada Concepción", 9: "San Juan Diego Cuauhtlatoatzin", 10: "Nuestra Señora de Loreto", 11: "San Dámaso I", 12: "Nuestra Señora de Guadalupe", 13: "Santa Lucía", 14: "San Juan de la Cruz", 15: "Santa Cristina", 16: "Santa Adelaida", 0: "San Lázaro", 18: "Nuestra Señora de la Esperanza", 19: "San Urbano V", 20: "Santo Domingo de Silos", 21: "San Pedro Canisio", 22: "Santa Francisca Javier Cabrini", 23: "San Antonio de Santa Ana Galvao", 24: "Nochebuena", 25: "Natividad del Señor (Navidad)", 26: "San Esteban Protomártir", 27: "San Juan Apóstol y Evangelista", 28: "Santos Inocentes", 29: "Santo Tomás Becket", 30: "Santa Judit / San Sabino", 31: "San Silvestre I" },
 };
 
 const monthNames = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
@@ -192,6 +192,33 @@ function getWeatherDescription(code, is_day) {
 
     return weatherCodes[code] || { desc: "Condiciones desconocidas", icon: "❓" };
 }
+async function getAirQuality(lat, lon) {
+    const url = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=european_aqi,pm2_5,pm10&timezone=auto`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return {
+            aqi: data.current.european_aqi,
+            pm25: data.current.pm2_5,
+            desc: getAQIDescription(data.current.european_aqi)
+        };
+    } catch (e) {
+        console.error("Error calidad aire:", e);
+        return null;
+    }
+}
+
+function getAQIDescription(aqi) {
+    if (aqi < 0)    return "Desconocida";
+    if (aqi <= 20)  return "Excelente";
+    if (aqi <= 40)  return "Buena";
+    if (aqi <= 60)  return "Moderada";
+    if (aqi <= 80)  return "Mala";
+    if (aqi <= 100) return "Muy Mala";
+    return "Extremadamente Mala";
+}
+
+
 
 function renderWeeklyForecast(data) {
     const container = document.getElementById("weekly-forecast-container");
@@ -320,6 +347,25 @@ async function fetchWeatherByCoords(lat, lon, locationObj) {
     } catch (e) { console.error("Error clima buscador:", e); }
 }
 
+// Dentro de displayWeatherData o como función complementaria:
+async function updateAQIUI(lat, lon) {
+    const airData = await getAirQuality(lat, lon);
+    if (airData) {
+        const aqiEl = document.getElementById("aqi-value");
+        const aqiDescEl = document.getElementById("aqi-desc");
+        
+        if (aqiEl) aqiEl.textContent = airData.aqi;
+        if (aqiDescEl) {
+            aqiDescEl.textContent = airData.desc;
+            // Opcional: Cambiar color según el índice
+            aqiDescEl.style.color = airData.aqi > 60 ? "#e74c3c" : "#2ecc71";
+        }
+        // Guardar para que el audio lo use
+        localStorage.setItem("last_aqi_value", airData.aqi);
+        localStorage.setItem("last_aqi_desc", airData.desc);
+    }
+}
+
 function displayWeatherData(data, cityId, locationObj = null) {
     if (data.timezone) localStorage.setItem("current_timezone", data.timezone);
 
@@ -407,39 +453,131 @@ function displayWeatherData(data, cityId, locationObj = null) {
     renderWeeklyForecast(data);
 }
 
-async function getWeatherData() {
-    const cities = [{ lat: 25.8087, lon: -100.3175 }, { lat: 25.6866, lon: -100.3161 }, { lat: 25.7502, lon: -100.2844 }, { lat: 22.2852, lon: -97.8778 }, { lat: 21.3509, lon: -97.6866 }];
-    const cityId = localStorage.getItem("userCity") || "0";
-    
-    const cachedData = JSON.parse(localStorage.getItem("weather_cache_data"));
-    const cachedCityId = localStorage.getItem("weather_cache_cityid");
-    const ahora = new Date().getTime();
+async function getWeatherData(forceUpdate = false) {
 
-    if (cachedData && cachedCityId === cityId && (ahora - cachedData.cachedAt < 900000)) {
-        const cachedLoc = JSON.parse(localStorage.getItem("weather_cache_location"));
-        displayWeatherData(cachedData, cityId, cachedLoc);
-        return;
-    }
+    const cities = [
+        { lat: 25.8087, lon: -100.3175 },
+        { lat: 25.6866, lon: -100.3161 },
+        { lat: 25.7502, lon: -100.2844 },
+        { lat: 22.2852, lon: -97.8778 },
+        { lat: 21.3509, lon: -97.6866 }
+    ];
+
+    const cityId = localStorage.getItem("userCity") || "0";
+    const ahora = Date.now();
+    const CACHE_DURATION = 15 * 60 * 1000; // 15 minutos
+
+    let lat, lon, locationObj = null;
 
     if (cityId === "custom") {
         const custom = JSON.parse(localStorage.getItem("last_custom_city"));
-        if (custom) return fetchWeatherByCoords(custom.lat, custom.lon, custom);
+        if (custom) {
+            lat = custom.lat;
+            lon = custom.lon;
+            locationObj = custom;
+        }
+    } else {
+        const city = cities[parseInt(cityId)];
+        lat = city.lat;
+        lon = city.lon;
     }
-    
-    const city = cities[cityId];
-    if (!city) return;
-    
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,surface_pressure,wind_speed_10m,visibility,dew_point_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,weather_code,precipitation_probability_max&timezone=auto&forecast_days=7`;
-    
+
+    // 🔎 -------- CONTROL DE CACHÉ --------
+    const cachedData = JSON.parse(localStorage.getItem("weather_cache_data"));
+    const cachedCity = localStorage.getItem("weather_cache_city");
+
+    if (
+        !forceUpdate &&
+        cachedData &&
+        cachedCity === cityId &&
+        (ahora - cachedData.cachedAt < CACHE_DURATION)
+    ) {
+        // Mostrar también AQI desde caché si existe
+        if (cachedData.aqiData) {
+            const { aqi, status, advice, iconClass } = cachedData.aqiData;
+            const statusEl = document.getElementById("aqi-status");
+            const adviceEl = document.getElementById("aqi-advice");
+            const iconEl = document.getElementById("aqi-icon-dynamic");
+
+            if (statusEl) statusEl.textContent = status;
+            if (adviceEl) adviceEl.textContent = advice;
+            if (iconEl) iconEl.className = `fas ${iconClass} aqi-icon`;
+        }
+
+        displayWeatherData(cachedData, cityId, locationObj);
+        return;
+    }
+
+    // ------------- URLs API -------------
+    const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,surface_pressure,wind_speed_10m,visibility,dew_point_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,weather_code,precipitation_probability_max&timezone=auto&forecast_days=7`;
+
+    const airQualityUrl = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=european_aqi&timezone=auto`;
+
     try {
-        const response = await fetch(url);
-        const data = await response.json();
-        data.cachedAt = new Date().getTime();
-        localStorage.setItem("weather_cache_data", JSON.stringify(data));
-        localStorage.setItem("weather_cache_cityid", cityId);
-        localStorage.removeItem("weather_cache_location");
-        displayWeatherData(data, cityId);
-    } catch (e) { console.error("Error clima:", e); }
+
+        const [weatherRes, airRes] = await Promise.all([
+            fetch(weatherUrl),
+            fetch(airQualityUrl)
+        ]);
+
+        const weatherData = await weatherRes.json();
+        const airData = await airRes.json();
+
+        // -------- LÓGICA AQI --------
+        const aqi = airData.current.european_aqi;
+        let status = "";
+        let advice = "";
+        let iconClass = "";
+
+        if (aqi <= 20) {
+            status = "Excelente";
+            advice = "Calidad de aire ideal para actividades al aire libre.";
+            iconClass = "fa-check-circle";
+        } else if (aqi <= 40) {
+            status = "Buena";
+            advice = "Calidad aceptable; sin riesgos para la población.";
+            iconClass = "fa-leaf";
+        } else if (aqi <= 60) {
+            status = "Moderada";
+            advice = "Riesgo moderado para personas muy sensibles.";
+            iconClass = "fa-smog";
+        } else if (aqi <= 80) {
+            status = "Mala";
+            advice = "El público general puede experimentar irritación.";
+            iconClass = "fa-mask";
+        } else {
+            status = "Muy Mala";
+            advice = "Aviso de salud por condiciones de emergencia.";
+            iconClass = "fa-exclamation-triangle";
+        }
+
+        const statusEl = document.getElementById("aqi-status");
+        const adviceEl = document.getElementById("aqi-advice");
+        const iconEl = document.getElementById("aqi-icon-dynamic");
+
+        if (statusEl) statusEl.textContent = status;
+        if (adviceEl) adviceEl.textContent = advice;
+        if (iconEl) iconEl.className = `fas ${iconClass} aqi-icon`;
+
+        // -------- GUARDAR CACHÉ --------
+        weatherData.cachedAt = ahora;
+        weatherData.aqiData = { aqi, status, advice, iconClass }; // <-- AQI también en caché
+
+        localStorage.setItem("weather_cache_data", JSON.stringify(weatherData));
+        localStorage.setItem("weather_cache_city", cityId);
+        localStorage.setItem("last_aqi_value", aqi);
+        localStorage.setItem("last_aqi_desc", status);
+        localStorage.setItem("last_aqi_advice", advice);
+
+        displayWeatherData(weatherData, cityId, locationObj);
+
+    } catch (e) {
+        console.error("Error al obtener datos meteorológicos:", e);
+
+        if (cachedData) {
+            displayWeatherData(cachedData, cityId, locationObj);
+        }
+    }
 }
 
 // ======================================
@@ -478,8 +616,14 @@ function updateTimeAndDate() {
     if (nodes.santoDay) nodes.santoDay.textContent = santo;
     if (nodes.weekNumber) nodes.weekNumber.textContent = now.getWeek();
     
+    if (!window.lastMoonCalc || now.getDate() !== window.lastMoonCalc) {
     const age = moon_day(now);
-    const moonIdx = Math.floor((age + 0.0625) * 8) % 8;
+    const moonIdxCalc = Math.floor((age + 0.0625) * 8) % 8;
+    window.cachedMoon = moonIdxCalc;
+    window.lastMoonCalc = now.toDateString();
+}
+
+const moonIdx = window.cachedMoon;
     const moonEmojis = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
     const moonTexts = ["Luna Nueva", "Luna Creciente", "Cuarto Creciente", "Gibosa Creciente", "Luna Llena", "Gibosa Menguante", "Cuarto Menguante", "Luna Menguante"];
     if (nodes.moonIcon) nodes.moonIcon.textContent = moonEmojis[moonIdx];
@@ -644,17 +788,21 @@ function initCorporateProtection() {
     }
 
     /* 5️⃣ MODO NOCTURNO */
-    function checkNightMode() {
-        const hour = new Date().getHours();
-        if (hour >= 0 && hour < 6 && !nightMode) {
-            nightMode = true;
-            container.style.opacity = 0.65;
-        }
-        if (hour >= 6 && nightMode) {
-            nightMode = false;
-            container.style.opacity = 0.92;
-        }
+   function checkNightMode() {
+    const hour = new Date().getHours();
+
+    if (hour >= 0 && hour < 6 && !nightMode) {
+        nightMode = true;
+        container.style.opacity = 0.65;
+        container.style.filter = "brightness(0.85)";
     }
+
+    if (hour >= 6 && nightMode) {
+        nightMode = false;
+        container.style.opacity = 0.92;
+        container.style.filter = "brightness(1)";
+    }
+}
 
     /* 6️⃣ REFRESCO VISUAL */
     
@@ -707,27 +855,49 @@ document.addEventListener("DOMContentLoaded", function () {
 // ======================================
 
 let voiceEnabled = false;
+let lastAnnouncementSecond = null;
+
+/**
+ * Función principal de anuncio.
+ * @param {boolean} forceUpdate - Si es true, refresca la API. Si es false, usa datos en pantalla.
+ */
+
+let speakingNow = false; // Bloqueo global (Mutex) para evitar superposiciones
 
 /**
  * Función principal de anuncio.
  * @param {boolean} forceUpdate - Si es true, refresca la API. Si es false, usa datos en pantalla.
  */
 async function announceWeather(forceUpdate = true) {
-    const toggle = document.getElementById("voice-toggle");
-    if (!toggle || !toggle.checked) return;
+    // 1️⃣ PREVENCIÓN DE ANUNCIOS SIMULTÁNEOS
+    const now = new Date();
+const currentSecondKey = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 
-    // 1. CONTROL DE CONSULTAS API
-    // Solo actualiza si es un anuncio automático (forceUpdate = true)
-    if (forceUpdate && typeof getWeatherData === "function") {
-        try {
-            localStorage.removeItem("weather_cache_data");
-            await getWeatherData(); 
-        } catch (e) {
-            console.error("Error actualizando clima antes del audio:", e);
-        }
+// 1️⃣ Bloqueo por ejecución activa
+if (speakingNow) return;
+
+// 2️⃣ Bloqueo por segundo exacto (anti-duplicado por lag)
+if (lastAnnouncementSecond === currentSecondKey) return;
+
+speakingNow = true;
+lastAnnouncementSecond = currentSecondKey;
+
+    const toggle = document.getElementById("voice-toggle");
+    if (!toggle || !toggle.checked) {
+        speakingNow = false;
+        return;
     }
 
-    // 2. OBTENCIÓN Y CORRECCIÓN DE CIUDAD (PARA TABLET)
+    // 2. CONTROL DE CONSULTAS API
+  if (forceUpdate && typeof getWeatherData === "function") {
+    try {
+        await getWeatherData(true);
+    } catch (e) {
+        console.error("Error actualizando clima antes del audio:", e);
+    }
+}
+
+    // 3. OBTENCIÓN Y CORRECCIÓN DE CIUDAD (PARA TABLET)
     const cityId = localStorage.getItem("userCity") || "0";
     const cities = [
         { name: "Gral. Escobedo" }, 
@@ -743,13 +913,46 @@ async function announceWeather(forceUpdate = true) {
     // Parche para que la tablet diga "General" y "Nuevo León" correctamente
     const nombreParaVoz = nombreCiudad.replace("Gral.", "General").replace("N.L.", "Nuevo León");
 
-    const ahora = new Date();
-    const horas = ahora.getHours();
-    const minutos = ahora.getMinutes();
+    let ahora = new Date();
+const savedTimezone = localStorage.getItem("current_timezone");
+
+if (savedTimezone) {
+    try {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: savedTimezone,
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false
+        });
+
+        const parts = formatter.formatToParts(ahora);
+        const p = {};
+        parts.forEach(part => p[part.type] = part.value);
+
+        ahora = new Date(
+            p.year,
+            p.month - 1,
+            p.day,
+            p.hour,
+            p.minute,
+            p.second
+        );
+    } catch (e) {
+        console.error("Error ajustando zona horaria en anuncio:", e);
+    }
+}
+
+const horas = ahora.getHours();
+const minutos = ahora.getMinutes();
     const temp = document.getElementById("current-temp")?.textContent.replace("°", "") || "--";
     const sensacion = document.getElementById("sensation-temp")?.textContent.replace("°", "") || "--";
+    const aire = document.getElementById("aqi-status")?.textContent || "";
 
-    // 3. LÓGICA DE SALUDOS DINÁMICOS
+    // 4. LÓGICA DE SALUDOS DINÁMICOS
     let saludoInicio = "";
     let saludoFinal = "";
 
@@ -760,9 +963,9 @@ async function announceWeather(forceUpdate = true) {
         saludoFinal = ". Buenas noches";
     }
 
-    const mensaje = `${saludoInicio}Son las ${horas} horas con ${minutos} minutos. La temperatura actual en ${nombreParaVoz} es de ${temp} grados con sensación de ${sensacion}${saludoFinal}`;
-
-    // 4. CONFIGURACIÓN DE VOZ
+    //const mensaje = `${saludoInicio}Son las ${horas} horas con ${minutos} minutos. La temperatura actual en ${nombreParaVoz} es de ${temp} grados con sensación de ${sensacion}${saludoFinal}`;
+    const mensaje = `${saludoInicio}Son las ${horas} horas, con ${minutos} minutos. Actualmente en ${nombreParaVoz} la calidad del aire es ${aire}. La temperatura es de ${temp} grados, con sensación térmica de ${sensacion}.${saludoFinal}`;
+    // 5. CONFIGURACIÓN DE VOZ
     const utterance = new SpeechSynthesisUtterance(mensaje);
     const voices = window.speechSynthesis.getVoices();
     const renata = voices.find(v => v.name.includes("Renata")) 
@@ -774,25 +977,37 @@ async function announceWeather(forceUpdate = true) {
         utterance.voice = renata;
     }
 
-    utterance.pitch = 1.1;
-    utterance.rate = 0.9; 
+   utterance.volume = 1;
+utterance.rate = 1;
+utterance.pitch = 1.05;
 
-    // 5. LÓGICA DEL TIMBRE (DING-DONG)
+    // 6. LÓGICA DEL TIMBRE Y LIBERACIÓN DE BLOQUEO
     const bell = new Audio('audio/ding-dong.mp3');
 
+    // Al terminar de hablar, suena el timbre y liberamos el bloqueo
     utterance.onend = () => {
         bell.play();
+        speakingNow = false;
+        console.log("Voz finalizada. Bloqueo liberado.");
     };
 
+    // Si hay un error, también liberamos el bloqueo para no dejar mudo el sistema
+    utterance.onerror = () => {
+        speakingNow = false;
+    };
+
+    // 7. EJECUCIÓN CON TIMBRE INICIAL
     bell.play().then(() => {
         setTimeout(() => {
+            window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utterance);
         }, 500);
     }).catch(e => {
+        // Fallback si el navegador bloquea el audio inicial
+        window.speechSynthesis.cancel();
         window.speechSynthesis.speak(utterance);
     });
 }
-
 /**
  * Inicializador del control de voz con monitoreo de tiempo real.
  */
@@ -820,13 +1035,45 @@ function initVoiceControl() {
 
     // RELOJ DE MONITOREO (REVISA CADA SEGUNDO)
     setInterval(() => {
-        const ahora = new Date();
-        const h = ahora.getHours();
-        const m = ahora.getMinutes();
-        const s = ahora.getSeconds();
+       let ahora = new Date();
+const savedTimezone = localStorage.getItem("current_timezone");
+
+if (savedTimezone) {
+    try {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: savedTimezone,
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false
+        });
+
+        const parts = formatter.formatToParts(ahora);
+        const p = {};
+        parts.forEach(part => p[part.type] = part.value);
+
+        ahora = new Date(
+            p.year,
+            p.month - 1,
+            p.day,
+            p.hour,
+            p.minute,
+            p.second
+        );
+    } catch (e) {
+        console.error("Error ajustando zona horaria en control de voz:", e);
+    }
+}
+
+const h = ahora.getHours();
+const m = ahora.getMinutes();
+const s = ahora.getSeconds();
 
         // A. AUTO-ACTIVACIÓN Y ANUNCIO DE LAS 07:00:00 (Fuerza API)
-        if (h === 7 && m === 0 && s === 0) {
+        if (h === 21 && m === 0 && s === 0) {
             if (voiceToggle && !voiceToggle.checked) {
                 voiceToggle.checked = true;
                 localStorage.setItem("voice_announcement_enabled", "true");
@@ -834,9 +1081,9 @@ function initVoiceControl() {
             announceWeather(true);
         } 
         // B. ANUNCIO DE CADA HORA EN PUNTO (Fuerza API)
-        else if (m === 0 && s === 0) {
-            announceWeather(true);
-        }
+        else if (m === 0 && s === 0 ) {
+    announceWeather(false);
+}
         // C. AUTO-DESACTIVACIÓN A LAS 21:01:00
         else if (h === 21 && m === 1 && s === 0) {
             if (voiceToggle && voiceToggle.checked) {

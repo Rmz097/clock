@@ -145,35 +145,17 @@
             </div>
         </header>
 
-        <section class="weather-details-box">
-            <div class="sensation-row">
-                <span class="sensation-label">RESUMEN DEL DÍA</span>
-                <div class="sensation-temp-value">
-                    <span id="weather-description">Cargando datos...</span>
-                </div>
-            </div>
-            
-            <div class="details-grid">
-                <div class="detail-row">
-                    
-                    <span class="detail-label">🌬️ Viento</span>
-                    <span id="wind-speed" class="detail-value">-- km/h</span>
-                </div>
-                <div class="detail-row">
-                    
-                    <span class="detail-label">💧 Humedad</span>
-                    <span id="humidity" class="detail-value">--%</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">☀️ Índice UV</span>
-                    <span id="uv-index" class="detail-value">--</span>
-                </div>
-                <div class="detail-row"> 
-                    <span class="detail-label">🔭 Visibilidad</span>
-                    <span id="visibility" class="detail-value">-- km</span>
-                </div>
-            </div>
-        </section>
+        <section class="hourly-tabs">
+
+    <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="temp">Temperatura</button>
+        <button class="tab-btn" data-tab="rain">Precipitación</button>
+        <button class="tab-btn" data-tab="wind">Viento</button>
+    </div>
+
+    <div id="hourly-container" class="hourly-container"></div>
+
+</section>
 
         <h2 style="color: var(--text-color-primary); font-weight: 900; margin-top: 10px;">PRONÓSTICO EXTENDIDO</h2>
         

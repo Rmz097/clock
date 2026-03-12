@@ -244,6 +244,37 @@ function renderWeeklyForecast(data) {
     });
 }
 
+function renderHourlyForecast(data, type = "temp") {
+
+    const container = document.getElementById("hourly-container");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const times = data.hourly.time;
+    const temps = data.hourly.temperature_2m;
+    const rain = data.hourly.precipitation_probability;
+    const wind = data.hourly.wind_speed_10m;
+
+    for (let i = 0; i < 24; i++) {
+
+        const hour = new Date(times[i]).getHours();
+
+        let value = "";
+
+        if (type === "temp") value = `${Math.round(temps[i])}°`;
+        if (type === "rain") value = `${rain[i]}%`;
+        if (type === "wind") value = `${Math.round(wind[i])} km/h`;
+
+        container.innerHTML += `
+            <div class="hourly-item">
+                <div class="hour">${hour}:00</div>
+                <div class="value">${value}</div>
+            </div>
+        `;
+    }
+}
+
 async function setupSearch() {
     const input = document.getElementById('city-input');
     const results = document.getElementById('search-results');
@@ -451,6 +482,8 @@ function displayWeatherData(data, cityId, locationObj = null) {
     }
 
     renderWeeklyForecast(data);
+
+    renderHourlyForecast(data, "temp");
 }
 
 async function getWeatherData(forceUpdate = false) {
@@ -509,7 +542,15 @@ async function getWeatherData(forceUpdate = false) {
     }
 
     // ------------- URLs API -------------
-    const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,surface_pressure,wind_speed_10m,visibility,dew_point_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,weather_code,precipitation_probability_max&timezone=auto&forecast_days=7`;
+    
+    //const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,surface_pressure,wind_speed_10m,visibility,dew_point_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,weather_code,precipitation_probability_max&timezone=auto&forecast_days=7`;
+
+    const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}
+&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,surface_pressure,wind_speed_10m,visibility,dew_point_2m,precipitation_probability
+&hourly=temperature_2m,precipitation_probability,wind_speed_10m,weather_code
+&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,weather_code,precipitation_probability_max
+&timezone=auto
+&forecast_days=7`;
 
     const airQualityUrl = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=european_aqi&timezone=auto`;
 
@@ -1112,3 +1153,23 @@ document.addEventListener("DOMContentLoaded", () => {
 // Creamos una versión de prueba que use las 7 AM
 
 document.addEventListener("DOMContentLoaded", initApp);
+
+document.addEventListener("click", function(e){
+
+    if(!e.target.classList.contains("tab-btn")) return;
+
+    document.querySelectorAll(".tab-btn").forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    e.target.classList.add("active");
+
+    const type = e.target.dataset.tab;
+
+    const cachedData = JSON.parse(localStorage.getItem("weather_cache_data"));
+
+    if(cachedData){
+        renderHourlyForecast(cachedData, type);
+    }
+
+});
