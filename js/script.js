@@ -6,20 +6,7 @@
 // ======================================
 // 1. CONFIGURACIÓN Y SANTORAL
 // ======================================
-const Santoral = {
-    1: { 1: "Santa María Madre de Dios", 2: "San Basilio Magno y San Gregorio Nacianceno", 3: "Santo Tomás de Aquino", 4: "Santa Ángela de Foligno", 5: "San Juan Nepomuceno Neumann", 6: "Epifanía del Señor (Reyes Magos)", 7: "San Raimundo de Peñafort", 8: "San Severino", 9: "San Eulogio de Córdoba", 10: "San Gregorio X, Papa", 11: "San Teodosio Cenobiarca", 12: "San Benito Biscop", 13: "San Hilario de Poitiers", 14: "San Félix de Nola", 15: "San Pablo Eremita", 16: "San Marcelo I", 0: "San Antonio Abad", 18: "Santa Prisca", 19: "San Mario y Santa Marta", 20: "San Fabián, Papa y San Sebastián", 21: "Santa Inés de Roma", 22: "San Vicente de Zaragoza", 23: "San Ildefonso de Toledo", 24: "San Francisco de Sales", 25: "Conversión de San Pablo", 26: "San Timoteo y San Tito", 27: "Santa Ángela de Mérici", 28: "Santo Tomás de Aquino", 29: "San Francisco de Sales", 30: "Santa Martina", 31: "San Juan Bosco" },
-    2: { 1: "Santa Brígida de Kildare", 2: "Presentación del Señor (Candelaria)", 3: "San Blas de Sebaste", 4: "San Gilberto de Sempringham", 5: "Santa Águeda de Catania", 6: "San Pablo Miki y compañeros", 7: "San Ricardo, Rey", 8: "San Jerónimo Emiliani", 9: "Santa Apolonia", 10: "Santa Escolástica", 11: "Nuestra Señora de Lourdes", 12: "Santa Eulalia de Barcelona", 13: "San Benigno de Todi", 14: "San Cirilo y San Metodio", 15: "San Claudio de la Colombière", 16: "Santa Juliana de Florencia", 0: "Los Siete Fundadores de la Orden de los Servitas", 18: "San Simeón", 19: "San Conrado de Piacenza", 20: "San Eleuterio", 21: "San Pedro Damián", 22: "Cátedra de San Pedro", 23: "San Policarpo de Esmirna", 24: "San Sergio y San Baco", 25: "Santa Walburga", 26: "San Néstor", 27: "San Gabriel de Nuestra Señora de los Dolores", 28: "San Román Abad", 29: "San Osvaldo de Worcester" },
-    3: { 1: "San Albino de Angers", 2: "Santa Inés de Bohemia", 3: "Santa Catalina Drexel", 4: "San Casimiro de Polonia", 5: "San Juan José de la Cruz", 6: "Santa Rosa de Viterbo", 7: "Santas Perpetua y Felicidad", 8: "San Juan de Dios", 9: "Santa Francisca Romana", 10: "San Cayo y San Alejandro", 11: "Santa Sofronia", 12: "San Maximiliano", 13: "Santa Eufrasia de Constantinopla", 14: "Santa Matilde", 15: "San Longino", 16: "Santa Heriberto de Colonia", 0: "San Patricio de Irlanda", 18: "San Cirilo de Jerusalén", 19: "San José, Esposo de la Virgen María", 20: "San Martín de Braga", 21: "San Nicolás de Flüe", 22: "Santa Lea de Roma", 23: "San Toribio de Mogrovejo", 24: "Santa Catalina de Suecia", 25: "Anunciación del Señor", 26: "San Manuel de Creta", 27: "San Ruperto de Salzburgo", 28: "San Sixto III", 29: "San Jonás", 30: "San Juan Clímaco", 31: "Santa Balbina" },
-    4: { 1: "San Hugo de Grenoble", 2: "San Francisco de Paula", 3: "San Sixto I", 4: "San Isidoro de Sevilla", 5: "San Vicente Ferrer", 6: "San Pedro de Verona", 7: "San Juan Bautista de La Salle", 8: "Santa Julia Billiart", 9: "Santa María de Cleofás", 10: "San Miguel de los Santos", 11: "San Estanislao de Cracovia", 12: "San Julio I", 13: "San Martín I, Papa", 14: "San Telmo", 15: "Santa Anastasia", 16: "Santa Bernadette Soubirous", 0: "Santa Kateri Tekakwitha", 18: "San Perfecto de Córdoba", 19: "San Abraham", 20: "San Teotimo", 21: "San Anselmo de Canterbury", 22: "San Cayo y San Sotero", 23: "San Jorge, Mártir", 24: "San Fidel de Sigmaringa", 25: "San Marcos Evangelista", 26: "Nuestra Señora del Buen Consejo", 27: "Santa Zita de Lucca", 28: "San Luis María Grignion de Montfort", 29: "Santa Catalina de Siena", 30: "San Pío V, Papa" },
-    5: { 1: "San José Obrero", 2: "San Atanasio", 3: "San Felipe y Santiago el Menor", 4: "San Florián", 5: "San Hilarión de Gaza", 6: "San Juan ante Portam Latinam", 7: "San Juan de Beverley", 8: "Nuestra Señora de Luján", 9: "San Pacomio", 10: "San Juan de Ávila", 11: "San Mamerto de Vienne", 12: "San Nereo y San Aquiles", 13: "Nuestra Señora de Fátima", 14: "San Matías Apóstol", 15: "San Isidro Labrador", 16: "San Ubaldo", 0: "San Pascual Bailón", 18: "San Juan I, Papa", 19: "San Crispín de Viterbo", 20: "San Bernardino de Siena", 21: "San Cristóbal Magallanes y compañeros mártires", 22: "Santa Rita de Casia", 23: "San Desiderio de Langres", 24: "María Auxiliadora", 25: "San Beda el Venerable", 26: "San Felipe Neri", 27: "San Agustín de Canterbury", 28: "San Germán de París", 29: "San Maximino de Tréveris", 30: "Santa Juana de Arco", 31: "Visitación de la Virgen María" },
-    6: { 1: "San Justino, Mártir", 2: "San Marcelino y San Pedro", 3: "San Carlos Lwanga y compañeros mártires", 4: "San Francisco Caracciolo", 5: "San Bonifacio", 6: "San Norberto", 7: "San Roberto de Newminster", 8: "San Maximino de Aix", 9: "San Efrén de Siria", 10: "San Landerico de París", 11: "San Bernabé Apóstol", 12: "San Juan de Sahagún", 13: "San Antonio de Padua", 14: "San Eliseo", 15: "Santa Germana Cousin", 16: "Santa Lutgarda", 0: "San Alberto Chmielowski", 18: "San Gregorio Barbarigo", 19: "San Romualdo", 20: "San Silvano", 21: "San Luis Gonzaga", 22: "San Juan Fisher y Santo Tomás Moro", 23: "Santa Etheldreda", 24: "Natividad de San Juan Bautista", 25: "Santa Soledad", 26: "San Josemaría Escrivá de Balaguer", 27: "San Cirilo de Alejandría", 28: "San Ireneo de Lyon", 29: "San Pedro y San Pablo, Apóstoles", 30: "Los Primeros Mártires de la Iglesia de Roma" },
-    7: { 1: "San Aarón", 2: "San Bernardino Realino", 3: "Santo Tomás Apóstol", 4: "Santa Isabel de Portugal", 5: "San Antonio María Zaccaría", 6: "Santa María Goretti", 7: "San Fermín de Amiens", 8: "San Eugenio III, Papa", 9: "Santa Verónica Giuliani", 10: "Santa Felicidad", 11: "San Benito de Nursia", 12: "San Juan Gualberto", 13: "San Enrique II", 14: "San Camilo de Lelis", 15: "San Buenaventura", 16: "Nuestra Señora del Carmen", 0: "Santa Marcelina", 18: "San Camilo de Lelis", 19: "San Vicente de Paúl", 20: "San Apolinar de Rávena", 21: "San Lorenzo de Brindis", 22: "Santa María Magdalena", 23: "Santa Brígida de Suecia", 24: "San Charbel Makhlouf", 25: "Santiago Apóstol", 26: "San Joaquín y Santa Ana", 27: "San Pantaleón", 28: "San Víctor I, Papa", 29: "Santa Marta, Santa María y San Lázaro", 30: "San Pedro Crisólogo", 31: "San Ignacio de Loyola" },
-    8: { 1: "San Alfonso María de Ligorio", 2: "San Eusebio de Vercelli", 3: "Santa Lidia", 4: "San Juan María Vianney (Cura de Ars)", 5: "Dedicación de Santa María la Mayor", 6: "Transfiguración del Señor", 7: "San Sixto II, Papa y compañeros mártires", 8: "Santo Domingo de Guzmán", 9: "Santa Teresa Benedicta de la Cruz (Edith Stein)", 10: "San Lorenzo, Mártir", 11: "Santa Clara de Asís", 12: "Santa Juana de Chantal", 13: "San Ponciano y San Hipólito", 14: "San Maximiliano María Kolbe", 15: "Asunción de la Virgen María", 16: "San Esteban de Hungría", 0: "San Jacinto de Polonia", 18: "Santa Elena", 19: "San Juan Eudes", 20: "San Bernardo de Claraval", 21: "San Pío X, Papa", 22: "Santa María Reina", 23: "Santa Rosa de Lima", 24: "San Bartolomé Apóstol", 25: "San Luis IX de Francia", 26: "San Ceferino, Papa", 27: "Santa Mónica", 28: "San Agustín de Hipona", 29: "Martirio de San Juan Bautista", 30: "San Felix", 31: "San Ramón Nonato" },
-    9: { 1: "San Josué", 2: "Santa Rachel", 3: "San Gregorio Magno", 4: "Santa Rosa de Viterbo", 5: "Santa Teresa de Calcuta", 6: "San Zacarías", 7: "San Clodoaldo", 8: "Natividad de la Virgen María", 9: "San Pedro Claver", 10: "San Nicolás de Tolentino", 11: "San Proto y San Jacinto", 12: "Dulce Nombre de María", 13: "San Juan Crisóstomo", 14: "Exaltación de la Santa Cruz", 15: "Nuestra Señora de los Dolores", 16: "San Cornelio y San Cipriano", 0: "San Roberto Belarmino", 18: "San Ricardo de Wessex", 19: "San Jenaro", 20: "San Andrés Kim Taegon y compañeros mártires", 21: "San Mateo Apóstol y Evangelista", 22: "San Mauricio", 23: "San Pío de Pietrelcina (Padre Pío)", 24: "Nuestra Señora de la Merced", 25: "San Cleofás", 26: "San Cosme y San Damián", 27: "San Vicente de Paúl", 28: "San Wenceslao", 29: "San Miguel, San Gabriel y San Rafael, Arcángeles", 30: "San Jerónimo" },
-    10: { 1: "Santa Teresita del Niño Jesús", 2: "Santos Ángeles Custodios", 3: "San Francisco de Borja", 4: "San Francisco de Asís", 5: "Santa Faustina Kowalska", 6: "San Bruno de Colonia", 7: "Nuestra Señora del Rosario", 8: "Santa Pelagia", 9: "San Dionisio y compañeros mártires", 10: "San Francisco de Paula", 11: "San Juan XXIII, Papa", 12: "Nuestra Señora del Pilar (Día de la Hispanidad)", 13: "San Eduardo el Confesor", 14: "San Calixto I, Papa", 15: "Santa Teresa de Jesús (de Ávila)", 16: "Santa Eduviges", 0: "San Ignacio de Antioquía", 18: "San Lucas Evangelista", 19: "San Pablo de la Cruz", 20: "San Artemio", 21: "Santa Úrsula y compañeras", 22: "San Juan Pablo II, Papa", 23: "San Juan de Capistrano", 24: "San Antonio María Claret", 25: "San Crisanto y Santa Daría", 26: "San Rogaciano y San Felicísimo", 27: "San Frumentio", 28: "San Simón y San Judas, Apóstoles", 29: "San Narciso de Jerusalén", 30: "San Marcelo de Tánger", 31: "San Quintín" },
-    11: { 1: "Todos los Santos", 2: "Conmemoración de los Fieles Difuntos", 3: "San Martín de Porres", 4: "San Carlos Borromeo", 5: "Santa Isabel, madre de San Juan Bautista", 6: "San Leonardo de Noblac", 7: "San Ernesto", 8: "Beato Juan Duns Scoto", 9: "Dedicación de la Basílica de Letrán", 10: "San León Magno", 11: "San Martín de Tours", 12: "San Josafat", 13: "San Diego de Alcalá", 14: "San Nicolás Tavélic", 15: "San Alberto Magno", 16: "Santa Margarita de Escocia", 0: "Santa Isabel de Hungría", 18: "Dedicación de San Pedro y San Pablo", 19: "Santa Matilde de Hackeborn", 20: "San Félix de Valois", 21: "Presentación de la Virgen María", 22: "Santa Cecilia", 23: "San Clemente I", 24: "San Andrés Dung Lac y compañeros mártires", 25: "Santa Catalina de Alejandría", 26: "San Silvestre Gozzolini", 27: "Nuestra Señora de la Medalla Milagrosa", 28: "Santa Catalina Labouré", 29: "San Saturnino", 30: "San Andrés Apóstol" },
-    12: { 1: "San Eloy", 2: "Santa Bibiana / San Ponciano", 3: "San Francisco Javier", 4: "Santa Bárbara / San Juan Damasceno", 5: "San Sabás", 6: "San Nicolás de Bari", 7: "San Ambrosio de Milán", 8: "Inmaculada Concepción", 9: "San Juan Diego Cuauhtlatoatzin", 10: "Nuestra Señora de Loreto", 11: "San Dámaso I", 12: "Nuestra Señora de Guadalupe", 13: "Santa Lucía", 14: "San Juan de la Cruz", 15: "Santa Cristina", 16: "Santa Adelaida", 0: "San Lázaro", 18: "Nuestra Señora de la Esperanza", 19: "San Urbano V", 20: "Santo Domingo de Silos", 21: "San Pedro Canisio", 22: "Santa Francisca Javier Cabrini", 23: "San Antonio de Santa Ana Galvao", 24: "Nochebuena", 25: "Natividad del Señor (Navidad)", 26: "San Esteban Protomártir", 27: "San Juan Apóstol y Evangelista", 28: "Santos Inocentes", 29: "Santo Tomás Becket", 30: "Santa Judit / San Sabino", 31: "San Silvestre I" },
-};
+
 
 const monthNames = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
 let currentDate = new Date(); 
@@ -129,7 +116,7 @@ function renderCalendar(month, year) {
       if ((i === 0 && j >= startingDay) || (i > 0 && dateCounter <= daysInMonth)) {
         if (j === 0) cell.classList.add('is-sunday');
         if (dateCounter === today.getDate() && month === today.getMonth() && year === today.getFullYear()) cell.classList.add("is-today");
-        cell.innerHTML = `<span class="day-number">${dateCounter}</span><span class="santoral-text">${Santoral[month + 1]?.[dateCounter] || ""}</span>`;
+       cell.innerHTML = `<span class="day-number">${dateCounter}</span>`;
         dateCounter++;
         rowHasContent = true;
       }
@@ -382,16 +369,16 @@ async function fetchWeatherByCoords(lat, lon, locationObj) {
 async function updateAQIUI(lat, lon) {
     const airData = await getAirQuality(lat, lon);
     if (airData) {
-        const aqiEl = document.getElementById("aqi-value");
-        const aqiDescEl = document.getElementById("aqi-desc");
+        const aqiEl = document.getElementById("aqi-status");
+        const aqiDescEl = document.getElementById("aqi-advice");
         
         if (aqiEl) aqiEl.textContent = airData.aqi;
+
         if (aqiDescEl) {
             aqiDescEl.textContent = airData.desc;
-            // Opcional: Cambiar color según el índice
             aqiDescEl.style.color = airData.aqi > 60 ? "#e74c3c" : "#2ecc71";
         }
-        // Guardar para que el audio lo use
+
         localStorage.setItem("last_aqi_value", airData.aqi);
         localStorage.setItem("last_aqi_desc", airData.desc);
     }
@@ -484,6 +471,23 @@ function displayWeatherData(data, cityId, locationObj = null) {
     renderWeeklyForecast(data);
 
     renderHourlyForecast(data, "temp");
+
+    // 1. Tomar la hora del dashboard
+const tz = data.timezone || "auto";
+
+const now = new Date(
+    new Date().toLocaleString("en-US", { timeZone: tz })
+);
+
+const dashboardHour = now.getHours();
+
+    // 2. Llamar a la función con todos los parámetros
+    updateWeatherBackground(
+    weather.desc,
+    dashboardHour,
+    data.daily.sunrise[0].split("T")[1],
+    data.daily.sunset[0].split("T")[1]
+);
 }
 
 async function getWeatherData(forceUpdate = false) {
@@ -653,8 +657,7 @@ function updateTimeAndDate() {
         nodes.dateNumber.textContent = now.getDate().toString().padStart(2, "0");
         nodes.monthYear.textContent = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
     }
-    const santo = Santoral[now.getMonth() + 1]?.[now.getDate()] || "N/A";
-    if (nodes.santoDay) nodes.santoDay.textContent = santo;
+    
     if (nodes.weekNumber) nodes.weekNumber.textContent = now.getWeek();
     
     if (!window.lastMoonCalc || now.getDate() !== window.lastMoonCalc) {
@@ -699,7 +702,6 @@ function initApp() {
         dayName: document.getElementById("day-name"),
         dateNumber: document.getElementById("date-number"),
         monthYear: document.getElementById("month-year"),
-        santoDay: document.getElementById("santo-day"),
         weekNumber: document.getElementById("week-number"),
         moonIcon: document.getElementById("moon-icon")
     };
@@ -750,6 +752,8 @@ function initApp() {
     
     setInterval(updateTimeAndDate, 1000);
     startWeatherAutoUpdate();
+
+    initRainEffect();
 }
 
 /* ===================================================== */
@@ -1145,6 +1149,195 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     initVoiceControl();
 });
+
+
+// ==========================================
+// Fondo dinámico inteligente según clima + hora
+// ==========================================
+
+function updateWeatherBackground(weatherDesc, dashboardHour, sunriseTime, sunsetTime) {
+
+    const hour = dashboardHour;
+
+    // Seguridad: si no vienen datos de amanecer/atardecer
+    let sunriseHour = 6;
+    let sunsetHour = 18;
+
+    if (sunriseTime && sunriseTime.includes(":")) {
+        sunriseHour = parseInt(sunriseTime.split(":")[0]);
+    }
+
+    if (sunsetTime && sunsetTime.includes(":")) {
+        sunsetHour = parseInt(sunsetTime.split(":")[0]);
+    }
+
+    let bg = "clear.jpg";
+
+    const desc = weatherDesc.toLowerCase();
+
+    // ACTIVAR ANIMACIÓN DE LLUVIA
+    const isRain = desc.includes("lluvia") || desc.includes("llovizna");
+
+    if (isRain) {
+        document.body.classList.add("rain-active");
+    } else {
+        document.body.classList.remove("rain-active");
+    }
+
+    // detectar si es de noche
+    const isNight = hour >= sunsetHour + 1 || hour < sunriseHour;
+
+    // --- PRIORIDAD: clima ---
+    if (desc.includes("tormenta")) {
+        bg = "storm.jpg";
+    } 
+    else if (desc.includes("lluvia") || desc.includes("llovizna")) {
+
+        if (isNight) {
+            bg = "rainy-night.jpg";
+        } else {
+            bg = "rain.jpg";
+        }
+
+    } 
+    else if (desc.includes("nieve")) {
+        bg = "snow.jpg";
+    } 
+    else if (desc.includes("niebla")) {
+        bg = "fog.jpg";
+    } 
+    else if (desc.includes("nublado") || desc.includes("nubes")) {
+
+        if (isNight) {
+            bg = "cloudy-night.jpg";
+        } else {
+            bg = "clouds.jpg";
+        }
+
+    } 
+    else {
+
+        // --- SEGÚN HORA ---
+        if (hour >= sunriseHour && hour < sunriseHour + 1) {
+            bg = "sunrise.jpg";
+        } 
+        else if (hour >= sunsetHour && hour < sunsetHour + 1) {
+            bg = "sunset.jpg";
+        } 
+        else if (isNight) {
+            bg = "night.jpg";
+        } 
+        else {
+            bg = "clear.jpg";
+        }
+
+    }
+
+    // Solo aplicar fondo si el tema es red-date
+    if(document.body.classList.contains("theme-red-date")){
+
+        document.body.style.backgroundImage =
+        `linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('./img/${bg}')`;
+
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundAttachment = "fixed";
+
+    }else{
+
+        // quitar fondo para otros temas
+        document.body.style.backgroundImage = "none";
+
+    }
+
+}
+
+function animateTime(){
+const time = document.getElementById("main-time");
+
+time.style.transform = "scale(1.05)";
+setTimeout(()=>{
+time.style.transform = "scale(1)";
+},120);
+}
+
+function updateTempBar(current,min,max){
+
+if(max === min){
+document.getElementById("temp-indicator").style.left = "50%";
+return;
+}
+
+const percent = ((current-min)/(max-min))*100;
+document.getElementById("temp-indicator").style.left = percent + "%";
+
+}
+
+function initRainEffect(){
+
+const canvas = document.getElementById("rain-canvas");
+if(!canvas) return;
+
+const ctx = canvas.getContext("2d");
+
+let drops = [];
+let dropCount = 120;
+
+function resize(){
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+}
+
+window.addEventListener("resize", resize);
+resize();
+
+function createDrops(){
+drops = [];
+
+for(let i=0;i<dropCount;i++){
+drops.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+len:10+Math.random()*20,
+speed:4+Math.random()*6
+});
+}
+
+}
+
+createDrops();
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.strokeStyle="rgba(200,220,255,0.5)";
+ctx.lineWidth=1;
+ctx.lineCap="round";
+
+for(let d of drops){
+
+ctx.beginPath();
+ctx.moveTo(d.x,d.y);
+ctx.lineTo(d.x,d.y+d.len);
+ctx.stroke();
+
+d.y+=d.speed;
+
+if(d.y>canvas.height){
+d.y=-20;
+d.x=Math.random()*canvas.width;
+}
+
+}
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
+
+}
 
 //document.addEventListener('contextmenu', function(event) {
    // event.preventDefault(); 

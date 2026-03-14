@@ -22,11 +22,12 @@
 
 .theme-red-date {
     --background-color: transparent;
-    --box-background: rgba(0, 61, 117, 0.2);
+    --box-background: rgba(108, 108, 108, 0.02);
     --text-color-primary: #f0f0f0;
     --text-color-secondary: #c0c0c0;
     --red-highlight: #fff;
-    --shadow: 12px 12px 12px rgba(0, 0, 0, 0.4);
+    /*shadow: 12px 12px 12px rgba(0, 0, 0, 0.4);*/
+    --shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .theme-dark .date-box .calendar-info,
@@ -51,7 +52,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    will-change: auto;
 }
 
 body {
@@ -65,16 +66,24 @@ body {
     background-attachment: fixed;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    transition: background-image 1.2s ease;
+}
+
+
+
+body, .time-box, .weather-summary-box, .date-box, .weather-details-box {
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body::-webkit-scrollbar { display: none; }
 
 .theme-red-date {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/bg.jpg');
+    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
 
 .container {
     width: 90%;
@@ -99,8 +108,9 @@ body::-webkit-scrollbar { display: none; }
     padding: 25px;
     box-shadow: var(--shadow);
     color: var(--text-color-primary);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    /*background-color: rgb(0,0,0,0.35);*/
     flex: 1;
 }
 
@@ -191,7 +201,7 @@ a { text-decoration: none; color: inherit; }
 #month-year { font-size: 1.5rem; font-weight: bold; margin-top: 10px; margin-bottom: 20px; }
 .calendar-info { width: 100%; padding-top: 15px; font-size: 1rem; font-weight: 400; }
 .calendar-info div { margin: 5px 0; }
-#week-info { font-weight: 700; }
+#week-info {font-weight: 700; text-align: center;}
 #moon-phase { display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 400; }
 #moon-icon { font-size: 1.5rem; }
 
@@ -345,6 +355,27 @@ a { text-decoration: none; color: inherit; }
     }
 }
 
+
+body.theme-dark,
+body.theme-light,
+body.theme-amoled,
+body.theme-amoled-pro{
+background-image:none !important;
+}
+
+body.theme-dark,
+body.theme-light,
+body.theme-amoled,
+body.theme-amoled-pro{
+background-image:none !important;
+}
+
+body.theme-red-date {
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
 /* ====================================== */
 /* 6. Controles                           */
 /* ====================================== */
@@ -354,8 +385,8 @@ a { text-decoration: none; color: inherit; }
     bottom: 20px;
     right: 20px;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     padding: 15px;
     border-radius: 12px;
     display: flex;
@@ -477,7 +508,7 @@ body.fullscreen-mode .container {
 }
 
 .theme-red-date #current-seconds,
-.theme-red-date .separator { color: #4D545D; }
+.theme-red-date .separator { color: #7b7b7b; }
 
 .flash-cache { animation: flash-green 1s ease-out; }
 @keyframes flash-green {
@@ -505,8 +536,8 @@ body.fullscreen-mode .container {
     border-radius: 25px;
     color: var(--text-color-primary);
     font-size: 1rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: var(--shadow);
     outline: none;
     transition: all 0.3s ease;
@@ -582,88 +613,6 @@ body.fullscreen-mode .container {
 .result-item-active {
     background-color: rgb(0, 111, 185) !important;
     cursor: pointer;
-}
-
-/* ====================================== */
-/* 9. Tema AMOLED / OLED Real Black       */
-/* ====================================== */
-
-.theme-amoled {
-    --background-color: #000000; /* Negro puro */
-    --box-background: #000000; /* Fondo totalmente negro */
-    --text-color-primary: #e6e6e6; /* Blanco suave (no blanco puro) */
-    --text-color-secondary: #9a9a9a;
-    --red-highlight: #4da3ff; /* Azul suave menos agresivo */
-    --shadow: none; /* Quitamos sombras para evitar halos */
-}
-
-/* Fondo completamente negro */
-.theme-amoled body {
-    background: #000000;
-}
-
-/* Cajas sin efecto vidrio */
-.theme-amoled .time-box,
-.theme-amoled .weather-summary-box,
-.theme-amoled .date-box,
-.theme-amoled .weather-details-box {
-    background-color: #000000;
-    box-shadow: none;
-    border: 1px solid rgba(255,255,255,0.05); /* Separación muy sutil */
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-}
-
-/* Separadores más suaves */
-.theme-amoled .detail-row,
-.theme-amoled .sensation-row {
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* Buscador adaptado */
-.theme-amoled #city-input {
-    background-color: #000000;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: none;
-}
-
-.theme-amoled .results-list {
-    background-color: #000000;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Reducimos brillo en números grandes */
-.theme-amoled #main-time,
-.theme-amoled #date-number,
-.theme-amoled #current-temp {
-    color: #e0e0e0;
-}
-
-/* Segundos menos brillantes */
-.theme-amoled #current-seconds,
-.theme-amoled .separator {
-    color: #666;
-}
-
-/* Controles menos invasivos */
-.theme-amoled .dashboard-controls {
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-@keyframes oled-shift {
-    0% { transform: translate(0px, 0px); }
-    25% { transform: translate(1px, 0px); }
-    50% { transform: translate(1px, 1px); }
-    75% { transform: translate(0px, 1px); }
-    100% { transform: translate(0px, 0px); }
-}
-
-.theme-amoled .container {
-    animation: oled-shift 60s infinite linear;
-}
-.theme-amoled #main-time {
-    opacity: 0.9;
 }
 
 /* ====================================== */
@@ -746,12 +695,13 @@ body.fullscreen-mode .container {
     20% { transform: translate(1px, 0px); }
     40% { transform: translate(1px, 1px); }
     60% { transform: translate(0px, 1px); }
-    80% { transform: translate(-1px, 0px); }f
+    80% { transform: translate(-1px, 0px); }
     100% { transform: translate(0px, 0px); }
 }
 
 .theme-amoled-pro .container {
-    animation: oled-pro-shift 180s infinite linear;
+    /*animation: oled-pro-shift 180s infinite linear;*/
+    animation: oled-pro-shift 600s infinite linear;
 }
 
 /* ====================================== */
@@ -956,3 +906,65 @@ input:checked + .slider:before {
     margin-left: 2px;
 }
 
+/*================*/
+#main-time,
+#current-seconds,
+#date-number {
+    will-change: contents;
+}
+
+#main-time,
+#current-seconds{
+transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.temp-bar{
+width:100%;
+height:6px;
+background:rgba(255,255,255,0.15);
+border-radius:10px;
+position:relative;
+margin-top:10px;
+}
+
+.temp-current{
+width:12px;
+height:12px;
+background:white;
+border-radius:50%;
+position:absolute;
+top:-3px;
+left:50%;
+transform:translateX(-50%);
+box-shadow:0 0 4px rgba(0,0,0,0.4);
+}
+
+#rain-canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:2;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.rain-active #rain-canvas{
+opacity:1;
+}
+
+#sky-canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+}
+
+#rain-canvas{
+z-index:1;
+}
