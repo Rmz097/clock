@@ -665,6 +665,13 @@ function updateTimeAndDate() {
     const moonIdxCalc = Math.floor((age + 0.0625) * 8) % 8;
     window.cachedMoon = moonIdxCalc;
     window.lastMoonCalc = now.toDateString();
+
+const mobileDateEl = document.getElementById("clock-date-mobile");
+
+if (mobileDateEl) {
+    const dayNames = ["DOMINGO","LUNES","MARTES","MIÉRCOLES","JUEVES","VIERNES","SÁBADO"];
+    mobileDateEl.textContent = `${dayNames[now.getDay()]} ${now.getDate()} DE ${monthNames[now.getMonth()]} DEL ${now.getFullYear()}`;
+}
 }
 
 const moonIdx = window.cachedMoon;

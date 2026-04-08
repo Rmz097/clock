@@ -28,6 +28,13 @@
     --red-highlight: #fff;
     /*shadow: 12px 12px 12px rgba(0, 0, 0, 0.4);*/
     --shadow: 0 4px 10px rgba(0,0,0,0.25);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#clock-date-mobile {
+    display: none;
 }
 
 .theme-dark .date-box .calendar-info,
@@ -35,8 +42,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.theme-red-date #current-temp,
-.theme-red-date .sensation-temp-value .temp-value {
+.theme-red-date #current-temp {
     color: var(--text-color-primary);
 }
 .theme-red-date .sensation-temp-value .temp-value {
@@ -76,14 +82,6 @@ body, .time-box, .weather-summary-box, .date-box, .weather-details-box {
 }
 
 body::-webkit-scrollbar { display: none; }
-
-.theme-red-date {
-    
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 
 .container {
     width: 90%;
@@ -363,19 +361,6 @@ body.theme-amoled-pro{
 background-image:none !important;
 }
 
-body.theme-dark,
-body.theme-light,
-body.theme-amoled,
-body.theme-amoled-pro{
-background-image:none !important;
-}
-
-body.theme-red-date {
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-}
-
 /* ====================================== */
 /* 6. Controles                           */
 /* ====================================== */
@@ -491,6 +476,158 @@ body.fullscreen-mode .container {
     .date-box { min-height: 300px; }
     .detail-value { width: 80px; }
 }
+
+@media (max-width: 1024px) and (orientation: landscape) {
+
+    /* ===== Reset general ===== */
+    body {
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px;
+        transform: none !important;
+    }
+
+    /* ===== Ocultar elementos ===== */
+    .weather-details-box,
+    .date-box {
+        display: none;
+    }
+
+    /* ===== Clima compacto ===== */
+    .weather-summary-box {
+        min-height: 0;
+        padding: 12px 16px;
+    }
+
+    .temp-row {
+        margin-bottom: 5px;
+    }
+
+    .update-time {
+        margin-bottom: 8px;
+    }
+
+    /* ===== AQI compacto ===== */
+    .weather-flex-container {
+        gap: 20px;
+        margin-top: 8px;
+    }
+
+    .aqi-container {
+        height: auto;
+        padding-left: 15px;
+    }
+
+    .aqi-value {
+        font-size: 2rem;
+    }
+
+    .aqi-desc {
+        font-size: 0.75rem;
+    }
+
+    /* ===== Hora protagonista ===== */
+    .time-box {
+        flex: 1;
+        min-height: 0;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #main-time,
+    #current-seconds,
+    .separator {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #current-seconds,
+    .separator {
+        transform: scale(1.3);
+        transform-origin: left center;
+    }
+
+    /* ===== Quitar cualquier scale en fullscreen ===== */
+    :fullscreen .container,
+    :-webkit-full-screen .container,
+    :-moz-full-screen .container,
+    body.fullscreen-mode .container {
+        transform: none !important;
+    }
+
+    /* ===== Safe area fix (móviles) ===== */
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    #current-date-full {
+        display: block;
+        margin-top: 6px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-color-secondary);
+        text-align: center;
+        letter-spacing: 0.5px;
+        opacity: 0.9;
+    }
+
+    #clock-date-mobile {
+        display: block;
+        margin-top: 6px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-color-secondary);
+        text-align: center;
+        letter-spacing: 0.5px;
+        opacity: 0.9;
+    }
+
+    .weather-summary-box {
+        display: flex;
+        justify-content: center;   /* centra TODO verticalmente */
+        align-items: center;       /* centra TODO horizontalmente */
+        text-align: center;
+    }
+
+    .weather-flex-container {
+        display: flex;
+        flex-direction: row;       /* 🔥 se quedan lado a lado */
+        justify-content: center;   /* centra el grupo completo */
+        align-items: center;
+        gap: 40px;                 /* espacio entre clima y AQI */
+        width: auto;
+    }
+
+    .weather-main-info {
+        align-items: center;
+    }
+
+    .aqi-container {
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid rgba(255,255,255,0.15); /* opcional */
+        padding-left: 20px;
+        height: auto;
+    }
+
+    /* opcional para estilo limpio tipo reloj */
+    .location,
+    .update-time {
+        display: none;
+    }
+}
+
 
 @media (max-width: 600px) {
     .container { padding: 10px; }
@@ -664,7 +801,7 @@ body.fullscreen-mode .container {
 
 /* Clima más discreto */
 .theme-amoled-pro #current-temp {
-    color: #afafaF;
+    color: #afafaf;
 }
 
 .theme-amoled-pro .detail-row,
@@ -946,7 +1083,7 @@ left:0;
 width:100%;
 height:100%;
 pointer-events:none;
-z-index:2;
+z-index:1;
 opacity:0;
 transition:opacity 1s ease;
 }
@@ -963,8 +1100,4 @@ width:100%;
 height:100%;
 z-index:-1;
 pointer-events:none;
-}
-
-#rain-canvas{
-z-index:1;
 }
