@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pronóstico Extendido | Dashboard Clima</title>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="./css/style.css"> 
-    
+    <link rel="stylesheet" href="./css/style.css">
+
     <style>
         /* OPTIMIZACIONES DE UI PARA DETALLES */
         body {
-            overflow-y: overlay; /* Scroll estético */
+            overflow-y: overlay;
+            /* Scroll estético */
             padding: 30px 5%;
             min-height: 100vh;
         }
@@ -41,7 +43,7 @@
             padding: 12px 25px;
             border-radius: 50px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -52,7 +54,7 @@
 
         .btn-back:hover {
             transform: translateX(-5px);
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Grid de Pronóstico Semanal */
@@ -69,7 +71,7 @@
             padding: 25px 15px;
             border-radius: 20px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
         }
@@ -107,34 +109,50 @@
         .day-rain {
             margin-top: 10px;
             font-size: 0.85rem;
-            color: #4da3ff; /* Azul para lluvia */
+            color: #4da3ff;
+            /* Azul para lluvia */
             font-weight: 700;
         }
 
         /* Estados de Carga (Skeleton) */
         .skeleton {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
         }
 
         @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
         }
 
         /* Media Queries para Tablets y Móviles */
         @media (max-width: 768px) {
-            .header-details { flex-direction: column; gap: 20px; text-align: center; }
-            .location-info { text-align: center !important; }
-            .weekly-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+            .header-details {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .location-info {
+                text-align: center !important;
+            }
+
+            .weekly-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            }
         }
     </style>
 </head>
 
 <body class="theme-red-date">
     <div class="details-container">
-        
+
         <header class="header-details">
             <a href="index.html" class="btn-back">
                 <i class="fas fa-arrow-left"></i> VOLVER
@@ -147,18 +165,18 @@
 
         <section class="hourly-tabs">
 
-    <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="temp">Temperatura</button>
-        <button class="tab-btn" data-tab="rain">Precipitación</button>
-        <button class="tab-btn" data-tab="wind">Viento</button>
-    </div>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="temp">Temperatura</button>
+                <button class="tab-btn" data-tab="rain">Precipitación</button>
+                <button class="tab-btn" data-tab="wind">Viento</button>
+            </div>
 
-    <div id="hourly-container" class="hourly-container"></div>
+            <div id="hourly-container" class="hourly-container"></div>
 
-</section>
+        </section>
 
         <h2 style="color: var(--text-color-primary); font-weight: 900; margin-top: 10px;">PRONÓSTICO EXTENDIDO</h2>
-        
+
         <div id="weekly-forecast-container" class="weekly-grid">
             <div class="forecast-day-item skeleton" style="height: 250px;"></div>
             <div class="forecast-day-item skeleton" style="height: 250px;"></div>
@@ -179,9 +197,10 @@
 
             // Disparar la carga de datos (debe estar definida en script.js)
             if (typeof getWeatherData === 'function') {
-                getWeatherData(); 
+                getWeatherData();
             }
         });
     </script>
 </body>
+
 </html>

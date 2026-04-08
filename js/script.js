@@ -1125,7 +1125,7 @@ const m = ahora.getMinutes();
 const s = ahora.getSeconds();
 
         // A. AUTO-ACTIVACIÓN Y ANUNCIO DE LAS 07:00:00 (Fuerza API)
-        if (h === 21 && m === 0 && s === 0) {
+        if (h === 7 && m === 0 && s === 0) {
             if (voiceToggle && !voiceToggle.checked) {
                 voiceToggle.checked = true;
                 localStorage.setItem("voice_announcement_enabled", "true");
