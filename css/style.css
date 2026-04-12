@@ -745,7 +745,7 @@ body.fullscreen-mode .container {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         gap: 8px;
         padding: 10px;
         transform: none !important;
@@ -808,10 +808,13 @@ body.fullscreen-mode .container {
         vertical-align: middle;
     }
 
+    #main-time {
+        font-size: 5rem;
+    }
+
     #current-seconds,
     .separator {
-        transform: scale(1.3);
-        transform-origin: left center;
+        font-size: 2rem;
     }
 
     /* ===== Quitar cualquier scale en fullscreen ===== */
@@ -881,12 +884,6 @@ body.fullscreen-mode .container {
         /* opcional */
         padding-left: 20px;
         height: auto;
-    }
-
-    /* opcional para estilo limpio tipo reloj */
-    .location,
-    .update-time {
-        display: none;
     }
 }
 
