@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="temp-min-max">
-                            Día <span id="temp-day">--</span> • Noche <span id="temp-night">--</span>
+                            Máx. <span id="temp-day">--</span> • Mín. <span id="temp-night">--</span>
                         </div>
                     </div>
 
@@ -85,14 +85,9 @@
 
                     <div class="details-grid">
                         <div class="detail-row">
-                            <span class="detail-icon">🌡️</span>
-                            <span class="detail-label">Máx./Mín.</span>
-                            <span class="detail-value" id="max-min-detail">--°/--°</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-icon">💧</span>
-                            <span class="detail-label">Humedad</span>
-                            <span class="detail-value" id="humidity">--%</span>
+                            <span class="detail-icon">🌧️</span>
+                            <span class="detail-label">Prob. de precipitación</span>
+                            <span class="detail-value" id="rain-probability">--%</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-icon">💨</span>
@@ -100,9 +95,9 @@
                             <span class="detail-value" id="pressure">-- hPa</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-icon">🔭</span>
-                            <span class="detail-label">Visibilidad</span>
-                            <span class="detail-value" id="visibility">-- km</span>
+                            <span class="detail-icon">💧</span>
+                            <span class="detail-label">Humedad</span>
+                            <span class="detail-value" id="humidity">--%</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-icon">🌬️</span>
@@ -110,24 +105,21 @@
                             <span class="detail-value" id="wind-speed">-- km/h</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-icon">☀️</span>
-                            <span class="detail-label">Índice UV</span>
-                            <span class="detail-value" id="uv-index">--</span>
-                        </div>
-                        <div class="detail-row">
                             <span class="detail-icon">💦</span>
                             <span class="detail-label">Punto de rocío</span>
                             <span class="detail-value" id="dew-point">--%</span>
                         </div>
+                        
                         <div class="detail-row">
-                            <span class="detail-icon">🌧️</span>
-                            <span class="detail-label">Prob. de precipitación</span>
-                            <span class="detail-value" id="rain-probability">--%</span>
+                            <span class="detail-icon">🔭</span>
+                            <span class="detail-label">Visibilidad</span>
+                            <span class="detail-value" id="visibility">-- km</span>
                         </div>
-                        <div class="detail-row" style="display: none">
-                            <span class="detail-icon">🌕</span>
-                            <span class="detail-label">Fase lunar</span>
-                            <span class="detail-value letter-min" id="moon-phase-detail">--</span>
+                        
+                        <div class="detail-row">
+                            <span class="detail-icon">☀️</span>
+                            <span class="detail-label">Índice UV</span>
+                            <span class="detail-value" id="uv-index">--</span>
                         </div>
                     </div>
                 </article>

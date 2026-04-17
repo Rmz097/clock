@@ -22,15 +22,24 @@
 
 .theme-red-date {
     --background-color: transparent;
-    --box-background: rgba(108, 108, 108, 0.02);
+    --box-background: rgba(0, 0, 0, 0.35);
+    /*--box-background: rgba(108, 108, 108, 0.02);*/
     --text-color-primary: #f0f0f0;
-    --text-color-secondary: #c0c0c0;
+    /*--text-color-secondary: #c0c0c0;*/
+    --text-color-secondary: #d0d0d0; /* antes #c0c0c0 */
     --red-highlight: #fff;
     /*shadow: 12px 12px 12px rgba(0, 0, 0, 0.4);*/
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.time-box,
+.weather-summary-box,
+.date-box,
+.weather-details-box {
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 #clock-date-mobile {
@@ -389,13 +398,15 @@ a {
 .details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px 30px;
+    /*gap: 15px 30px;*/
+    gap: 20px 40px;
 }
 
 .detail-row {
     display: flex;
     align-items: center;
-    padding: 5px 0;
+    /*padding: 5px 0;*/
+     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -404,7 +415,7 @@ a {
 }
 
 .detail-icon {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-right: 10px;
     width: 20px;
     text-align: center;
@@ -470,7 +481,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    border-left: 2px solid rgba(255, 255, 255, 0.35);
     /* Línea adaptativa */
     padding-left: 30px;
     /* Desplazamiento visual a la derecha */
@@ -504,7 +515,7 @@ a {
 /* Valor Numérico Principal */
 
 .aqi-value {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     /* Tamaño grande para "Buena" */
     font-weight: 900;
     line-height: 1;
