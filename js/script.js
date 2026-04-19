@@ -1036,8 +1036,8 @@ const minutos = ahora.getMinutes();
 
     if (isAndroidVoice) {
         // 📱 Android → más lento (más natural)
-        utterance.rate = 0.8;
-        utterance.pitch = 1.5;
+        utterance.rate = 0.5;
+        utterance.pitch = 2;
     } else {
         // 💻 PC / Windows → normal
         utterance.rate = 1;
