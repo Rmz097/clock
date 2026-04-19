@@ -688,17 +688,17 @@ body.theme-amoled-pro {
 }
 
 :fullscreen .container {
-    transform: scale(1.16);
+    transform: scale(1.13);
     transform-origin: center center;
 }
 
 :-webkit-full-screen .container {
-    transform: scale(1.16);
+    transform: scale(1.13);
     transform-origin: center center;
 }
 
 :-moz-full-screen .container {
-    transform: scale(1.16);
+    transform: scale(1.13);
     transform-origin: center center;
 }
 
