@@ -85,8 +85,6 @@ body {
     transition: background-image 1.2s ease;
 }
 
-
-
 body,
 .time-box,
 .weather-summary-box,
@@ -104,7 +102,7 @@ body::-webkit-scrollbar {
     max-width: 1200px;
     padding: 20px;
     display: flex;
-    gap: 20px;
+    gap: 20px
 }
 
 .content-column {
@@ -136,6 +134,23 @@ body::-webkit-scrollbar {
     /*background-color: rgb(0,0,0,0.35);*/
     flex: 1;
 }
+
+.link-subtle {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    /* 🔥 CLAVE: heredar todo */
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: inherit;
+}
+
+.link-subtle:hover {
+    color: var(--text-color-primary);
+    }
 
 /* ====================================== */
 /* 2. Caja de Hora (PRECISIÓN APLICADA)   */
@@ -673,17 +688,17 @@ body.theme-amoled-pro {
 }
 
 :fullscreen .container {
-    transform: scale(1.1);
+    transform: scale(1.16);
     transform-origin: center center;
 }
 
 :-webkit-full-screen .container {
-    transform: scale(1.1);
+    transform: scale(1.16);
     transform-origin: center center;
 }
 
 :-moz-full-screen .container {
-    transform: scale(1.1);
+    transform: scale(1.16);
     transform-origin: center center;
 }
 
@@ -697,7 +712,7 @@ body.fullscreen-mode {
     align-items: center;
 }
 
-body.fullscreen-mode .container {
+body.fullscreen-mode .container {   
     transform: scale(1.1);
     transform-origin: center center;
 }

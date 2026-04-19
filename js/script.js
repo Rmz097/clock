@@ -1026,12 +1026,27 @@ const minutos = ahora.getMinutes();
                  || voices.find(v => v.lang === "es-MX");
 
     if (renata) {
-        utterance.voice = renata;
-    }
+    utterance.voice = renata;
 
-   utterance.volume = 1;
-utterance.rate = 1;
-utterance.pitch = 1.05;
+    // Detectar si es voz de Android (Google)
+    const isAndroidVoice =
+        renata.name.toLowerCase().includes("google") ||
+        renata.voiceURI.toLowerCase().includes("google") ||
+        renata.localService === false;
+
+    if (isAndroidVoice) {
+        // 📱 Android → más lento (más natural)
+        utterance.rate = 0.85;
+        utterance.pitch = 1.0;
+    } else {
+        // 💻 PC / Windows → normal
+        utterance.rate = 1;
+        utterance.pitch = 1.05;
+    }
+}
+
+// volumen se queda igual
+utterance.volume = 1;
 
     // 6. LÓGICA DEL TIMBRE Y LIBERACIÓN DE BLOQUEO
     const bell = new Audio('audio/ding-dong.mp3');
