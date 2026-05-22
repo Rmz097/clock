@@ -115,7 +115,11 @@
                             <span class="detail-label">Visibilidad</span>
                             <span class="detail-value" id="visibility">-- km</span>
                         </div>
-
+                        <div class="detail-row">
+                            <span class="detail-icon">☁️</span>
+                            <span class="detail-label">Nubosidad</span>
+                            <span class="detail-value" id="cloud-cover">--</span>
+                        </div>
                         <div class="detail-row">
                             <span class="detail-icon">☀️</span>
                             <span class="detail-label">Índice UV</span>
@@ -147,13 +151,39 @@
             </a>
 
             <article class="time-box">
+
                 <div id="current-time">
+                    <div></div>
                     <span id="main-time">00:00</span>
                     <span class="separator">:</span>
                     <span id="current-seconds">00</span>
                 </div>
 
                 <div class="clock-date-mobile" id="clock-date-mobile">Prueba</div>
+                <div class="clock-location" id="clock-location">Ubicación</div>
+                <!-- NUEVO -->
+                <div class="mobile-corner mobile-temp" id="mobile-temp">
+
+                    <span class="mobile-weather-icon" id="mobile-weather-icon">
+                        ☀️
+                    </span>
+
+                    <span class="mobile-temp-text">
+                        Cargando...
+                    </span>
+
+                </div>
+
+                <div class="mobile-corner mobile-air" id="mobile-air">
+
+                    <i class="fas fa-wind mobile-air-icon" id="mobile-air-icon"></i>
+
+                    <span class="mobile-air-text">
+                        ICA: Cargando...
+                    </span>
+
+                </div>
+
             </article>
         </section>
     </main>
